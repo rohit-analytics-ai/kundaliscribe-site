@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — KundaliScribe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --gold:       #C9A84C;
+      --gold-light: #E8C97A;
+      --ink:        #1A1410;
+      --parchment:  #FAF6EE;
+      --warm-mid:   #6B5B3E;
+      --rule:       rgba(201,168,76,0.25);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--parchment);
+      color: var(--ink);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      line-height: 1.75;
+      font-size: 16px;
+    }
+
+    header {
+      background: var(--ink);
+      padding: 48px 24px 40px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 70% 120% at 50% -10%, rgba(201,168,76,0.18) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(28px, 5vw, 42px);
+      font-weight: 600;
+      color: var(--gold-light);
+      letter-spacing: 0.04em;
+      display: block;
+      margin-bottom: 6px;
+    }
+    .brand-sub {
+      font-size: 12px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+    }
+    .ornament {
+      display: block;
+      margin: 20px auto 0;
+      color: var(--gold);
+      font-size: 20px;
+      letter-spacing: 0.3em;
+    }
+
+    main {
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 56px 24px 80px;
+    }
+
+    .page-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(26px, 4vw, 36px);
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 6px;
+    }
+    .effective {
+      font-size: 13px;
+      color: var(--warm-mid);
+      letter-spacing: 0.05em;
+      margin-bottom: 40px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    section { margin-bottom: 44px; }
+
+    h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--gold);
+      letter-spacing: 0.04em;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    h2::before {
+      content: '';
+      display: inline-block;
+      width: 18px;
+      height: 1px;
+      background: var(--gold);
+      flex-shrink: 0;
+    }
+
+    p { margin-bottom: 14px; color: #2E2820; }
+    p:last-child { margin-bottom: 0; }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 14px;
+    }
+    ul li {
+      padding: 8px 0 8px 22px;
+      position: relative;
+      border-bottom: 1px solid var(--rule);
+      color: #2E2820;
+    }
+    ul li:first-child { border-top: 1px solid var(--rule); }
+    ul li::before {
+      content: '◈';
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+      font-size: 10px;
+      top: 10px;
+    }
+
+    .highlight-box {
+      background: rgba(201,168,76,0.07);
+      border-left: 3px solid var(--gold);
+      border-radius: 0 6px 6px 0;
+      padding: 16px 20px;
+      margin: 20px 0;
+      font-size: 15px;
+      color: var(--warm-mid);
+    }
+
+    .contact-card {
+      background: var(--ink);
+      border-radius: 10px;
+      padding: 28px 32px;
+      color: rgba(255,255,255,0.7);
+      font-size: 15px;
+    }
+    .contact-card a {
+      color: var(--gold-light);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .contact-card a:hover { text-decoration: underline; }
+
+    footer {
+      background: var(--ink);
+      text-align: center;
+      padding: 24px;
+      font-size: 12px;
+      color: rgba(255,255,255,0.3);
+      letter-spacing: 0.08em;
+    }
+
+    a { color: var(--gold); }
+  </style>
+</head>
+<body>
+
+<header>
+  <span class="brand">KundaliScribe</span>
+  <span class="brand-sub">AI Vedic Birth Chart Reports</span>
+  <span class="ornament">✦ ✦ ✦</span>
+</header>
+
+<main>
+  <h1 class="page-title">Privacy Policy</h1>
+  <p class="effective">Effective Date: March 22, 2026 &nbsp;·&nbsp; Last Updated: March 22, 2026</p>
+
+  <section>
+    <p>KundaliScribe ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains what information we collect, how we use it, and your rights when you use the KundaliScribe Android application and related services.</p>
+    <p>By using KundaliScribe, you agree to the practices described in this policy.</p>
+  </section>
+
+  <section>
+    <h2>Information We Collect</h2>
+    <p>We collect only the information necessary to provide and deliver your personalised Vedic birth chart report:</p>
+    <ul>
+      <li><strong>Full Name</strong> — used to personalise your chart report</li>
+      <li><strong>Date of Birth</strong> — required for planetary position calculations</li>
+      <li><strong>Time of Birth</strong> — required for ascendant and house calculations</li>
+      <li><strong>Place of Birth</strong> — used to determine geographic coordinates (latitude/longitude)</li>
+      <li><strong>Email Address</strong> — used to deliver your PDF report and related service communications</li>
+    </ul>
+    <div class="highlight-box">
+      We do not collect your phone number, contacts, photos, biometric data, precise device location, or social media profiles unless you voluntarily provide such information in a support inquiry.
+    </div>
+    <p>KundaliScribe does not require user account registration to access report generation services.</p>
+    <p>KundaliScribe does not use tracking technologies for advertising purposes and does not link collected personal information with third-party advertising networks.</p>
+  </section>
+
+  <section>
+    <h2>How We Use Your Information</h2>
+    <p>Your information may be shared with carefully selected service providers solely as needed to:</p>
+    <ul>
+      <li>Calculate your Vedic birth chart, including planetary positions, houses, yogas, doshas, and related astrological details</li>
+      <li>Generate a personalised AI-written report</li>
+      <li>Deliver your PDF report to the email address you provide</li>
+      <li>Process your in-app purchase through Google Play Billing or Apple App Store billing services, depending on your platform</li>
+      <li>Respond to follow-up support requests you send regarding your purchased report</li>
+      <li>Maintain service security, performance, reliability, and fraud prevention controls</li>
+    </ul>
+    <p>We do not use your information for advertising, behavioural profiling, or any purpose unrelated to providing the service you requested.</p>
+  </section>
+
+  <section>
+    <h2>Legal Basis for Processing</h2>
+    <p>Where applicable under international data protection laws, including the European Union General Data Protection Regulation (GDPR), we process your personal information based on your consent and where necessary to provide the services you request, including generation and delivery of your birth chart report.</p>
+  </section>
+
+  <section>
+    <h2>Third-Party Services</h2>
+    <p>To operate KundaliScribe, we share limited personal data with trusted third-party service providers solely for the purposes described in this policy. These providers are contractually obligated or otherwise legally bound to protect your data and process it only as necessary to provide their services.</p>
+    <ul>
+      <li><strong>Anthropic</strong> — may process submitted birth-related information to help generate report content. <a href="https://www.anthropic.com/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a></li>
+      <li><strong>Resend</strong> — may process your email address and report attachment to deliver your PDF report. <a href="https://resend.com/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a></li>
+      <li><strong>Google Play</strong> — handles Android in-app purchase processing. We do not receive or store your full payment card details. Google may independently collect data under its own <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>.</li>
+      <li><strong>Apple App Store</strong> — handles iOS in-app purchase processing where applicable. We do not receive or store your full payment card details. Apple may independently collect data under its own privacy terms.</li>
+      <li><strong>Cloud hosting and infrastructure providers</strong> — may temporarily process report data as needed to run our application, generate reports, deliver files, monitor uptime, and maintain technical reliability.</li>
+    </ul>
+    <p>We do not sell, rent, or share your personal data with data brokers or unrelated third parties.</p>
+  </section>
+
+  <section>
+    <h2>International Data Transfers</h2>
+    <p>Your information may be processed on servers located outside your country of residence, including in the United States or other jurisdictions where our service providers operate. By using KundaliScribe, you understand that your information may be transferred to countries that may have different data protection laws than your local jurisdiction.</p>
+  </section>
+
+  <section>
+    <h2>Data Retention</h2>
+    <p>Generated PDF reports and related processing data may be stored on our systems for up to 30 days to support delivery, re-download, troubleshooting, fraud prevention, and service reliability. After that period, such data is deleted or periodically purged in the ordinary course of operations unless a longer retention period is required by law or reasonably necessary to resolve an active dispute or abuse issue.</p>
+    <p>If you would like your data deleted sooner, contact us at the address below and we will process your request within 7 business days or earlier where technically feasible.</p>
+  </section>
+
+  <section>
+    <h2>Data Security</h2>
+    <p>We use reasonable administrative, technical, and organisational measures designed to protect your information. Data transmitted between the app, website, and our systems is sent using HTTPS encryption in transit.</p>
+    <p>Data submitted through KundaliScribe may be temporarily processed and stored on secure cloud infrastructure solely for report generation, delivery, debugging, fraud prevention, and system reliability monitoring. Limited technical logs may also be retained for operational and security purposes.</p>
+    <p>While we take reasonable precautions, no internet transmission or electronic storage method can be guaranteed to be completely secure.</p>
+  </section>
+
+  <section>
+    <h2>Children's Privacy</h2>
+    <p>KundaliScribe is not directed to children under the age of 13, and we do not knowingly collect personal information directly from children. If you believe a child has provided personal information to us, please contact us and we will take reasonable steps to delete it promptly.</p>
+  </section>
+
+  <section>
+    <h2>Your Rights</h2>
+    <p>Depending on your location, you may have the right to:</p>
+    <ul>
+      <li>Request access to the personal data we hold about you</li>
+      <li>Request correction of inaccurate or incomplete data</li>
+      <li>Request deletion of your data</li>
+      <li>Withdraw consent where processing is based on consent</li>
+      <li>Request information about how your data has been used or shared</li>
+    </ul>
+    <p>To exercise any of these rights, contact us using the details below. We may need to verify your request before taking action.</p>
+  </section>
+
+  <section>
+    <h2>Interpretive Content Disclaimer</h2>
+    <p>Reports generated by KundaliScribe are based on traditional Vedic astrology calculations and artificial intelligence generated interpretive content. These reports are provided for informational, reflective, and personal insight purposes only.</p>
+    <p>KundaliScribe does not provide medical, legal, financial, psychological, or other professional advice, and no report content should be relied upon as a substitute for qualified professional guidance.</p>
+  </section>
+
+  <section>
+    <h2>Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. When we do, we will revise the "Last Updated" date at the top of this page. Continued use of KundaliScribe after an updated policy becomes effective constitutes acceptance of the revised policy, to the extent permitted by law.</p>
+  </section>
+
+  <section>
+    <h2>Contact Us</h2>
+    <div class="contact-card">
+      <p>If you have questions, concerns, or requests regarding this Privacy Policy or your personal data, please contact us:</p>
+      <br />
+      <p><strong style="color:white">KundaliScribe</strong><br />
+      Email: <a href="mailto:kundaliscribe@gmail.com">kundaliscribe@gmail.com</a><br />
+      Website: <a href="https://kundaliscribe.com">kundaliscribe.com</a></p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  &copy; 2026 KundaliScribe &nbsp;·&nbsp; All rights reserved
+</footer>
+
+</body>
+</html>
