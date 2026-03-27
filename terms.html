@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Use — KundaliScribe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --gold:       #C9A84C;
+      --gold-light: #E8C97A;
+      --ink:        #1A1410;
+      --parchment:  #FAF6EE;
+      --warm-mid:   #6B5B3E;
+      --rule:       rgba(201,168,76,0.25);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--parchment);
+      color: var(--ink);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      line-height: 1.75;
+      font-size: 16px;
+    }
+
+    header {
+      background: var(--ink);
+      padding: 48px 24px 40px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 70% 120% at 50% -10%, rgba(201,168,76,0.18) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(28px, 5vw, 42px);
+      font-weight: 600;
+      color: var(--gold-light);
+      letter-spacing: 0.04em;
+      display: block;
+      margin-bottom: 6px;
+    }
+    .brand-sub {
+      font-size: 12px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+    }
+    .ornament {
+      display: block;
+      margin: 20px auto 0;
+      color: var(--gold);
+      font-size: 20px;
+      letter-spacing: 0.3em;
+    }
+
+    main {
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 56px 24px 80px;
+    }
+
+    .page-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(26px, 4vw, 36px);
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 6px;
+    }
+    .effective {
+      font-size: 13px;
+      color: var(--warm-mid);
+      letter-spacing: 0.05em;
+      margin-bottom: 18px;
+    }
+    .nav-line {
+      margin-bottom: 40px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid var(--rule);
+      font-size: 14px;
+      color: var(--warm-mid);
+    }
+    .nav-line a {
+      color: var(--gold);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .nav-line a:hover { text-decoration: underline; }
+
+    section { margin-bottom: 44px; }
+
+    h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--gold);
+      letter-spacing: 0.04em;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    h2::before {
+      content: '';
+      display: inline-block;
+      width: 18px;
+      height: 1px;
+      background: var(--gold);
+      flex-shrink: 0;
+    }
+
+    p { margin-bottom: 14px; color: #2E2820; }
+    p:last-child { margin-bottom: 0; }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 14px;
+    }
+    ul li {
+      padding: 8px 0 8px 22px;
+      position: relative;
+      border-bottom: 1px solid var(--rule);
+      color: #2E2820;
+    }
+    ul li:first-child { border-top: 1px solid var(--rule); }
+    ul li::before {
+      content: '◈';
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+      font-size: 10px;
+      top: 10px;
+    }
+
+    .highlight-box {
+      background: rgba(201,168,76,0.07);
+      border-left: 3px solid var(--gold);
+      border-radius: 0 6px 6px 0;
+      padding: 16px 20px;
+      margin: 20px 0;
+      font-size: 15px;
+      color: var(--warm-mid);
+    }
+
+    .contact-card {
+      background: var(--ink);
+      border-radius: 10px;
+      padding: 28px 32px;
+      color: rgba(255,255,255,0.7);
+      font-size: 15px;
+    }
+    .contact-card a {
+      color: var(--gold-light);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .contact-card a:hover { text-decoration: underline; }
+
+    footer {
+      background: var(--ink);
+      text-align: center;
+      padding: 24px;
+      font-size: 12px;
+      color: rgba(255,255,255,0.3);
+      letter-spacing: 0.08em;
+    }
+
+    a { color: var(--gold); }
+  </style>
+</head>
+<body>
+
+<header>
+  <span class="brand">KundaliScribe</span>
+  <span class="brand-sub">AI Vedic Birth Chart Reports</span>
+  <span class="ornament">✦ ✦ ✦</span>
+</header>
+
+<main>
+  <h1 class="page-title">Terms of Use</h1>
+
+  <p class="effective">
+    Effective Date: March 27, 2026 &nbsp;·&nbsp; Last Updated: March 27, 2026
+  </p>
+
+  <p class="nav-line">
+    Related pages:
+    <a href="https://kundaliscribe.com/privacy.html">
+      https://kundaliscribe.com/privacy.html
+    </a>
+    &nbsp;·&nbsp;
+    <a href="https://kundaliscribe.com/delete-my-data.html">
+      https://kundaliscribe.com/delete-my-data.html
+    </a>
+  </p>
+  
+  <section>
+    <p>These Terms of Use govern your use of the KundaliScribe mobile application, website, and related services. By accessing or using KundaliScribe, you agree to these Terms.</p>
+    <p>KundaliScribe provides AI-assisted Vedic astrology reports for informational, educational, and reflective purposes only. The service does not provide medical, financial, legal, psychological, or other professional advice.</p>
+  </section>
+
+  <section>
+    <h2>Nature of the Service</h2>
+    <p>KundaliScribe generates preview content and premium reports using astrology calculation services and artificial intelligence systems based on the birth details provided by the user.</p>
+    <p>No human astrologer review is performed unless explicitly stated. No guarantees are made regarding predictions, interpretations, compatibility outcomes, timing, or life events described in generated reports.</p>
+    <div class="highlight-box">
+      Decisions made based on KundaliScribe content remain solely the responsibility of the user.
+    </div>
+  </section>
+
+  <section>
+    <h2>Payments and Refunds</h2>
+    <p>KundaliScribe provides paid AI-generated astrology reports as one-time digital purchases within the app. Payment processing is handled by the applicable app store provider, such as Google Play or the Apple App Store, and purchases are subject to the billing policies of those platforms.</p>
+    <p>Except where required by applicable law, all purchases are final and non-refundable once report generation has begun or the report has been delivered.</p>
+    <p>If you experience a technical issue preventing report delivery, please contact us at kundaliscribe@gmail.com and we will make reasonable efforts to resolve the issue.</p>
+  </section>
+
+  <section>
+    <h2>Age Eligibility</h2>
+    <p>KundaliScribe is intended for users aged 18 or older. Birth details of individuals under 18 may be submitted only by a parent or legal guardian with appropriate consent.</p>
+  </section>
+
+  <section>
+    <h2>Acceptable Use</h2>
+    <p>You agree not to misuse the KundaliScribe service. Prohibited activities include:</p>
+    <ul>
+      <li>Submitting birth information without appropriate authority or consent</li>
+      <li>Using the service for unlawful, harmful, deceptive, or fraudulent purposes</li>
+      <li>Copying, reselling, redistributing, or commercially exploiting generated reports without permission</li>
+      <li>Attempting to reverse engineer, disrupt, probe, overload, or interfere with service functionality</li>
+      <li>Using automated tools or scripts to abuse, scrape, or interfere with the service</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Intellectual Property</h2>
+    <p>You retain ownership of the birth information you provide. KundaliScribe retains ownership of its software systems, report structure, prompts, templates, branding, and generated interpretive content to the fullest extent permitted by law.</p>
+    <p>Reports generated through the service are licensed to you for personal, non-commercial use only unless otherwise explicitly permitted by KundaliScribe in writing.</p>
+  </section>
+
+  <section>
+    <h2>Service Suspension or Termination</h2>
+    <p>We reserve the right to suspend, restrict, or terminate access to the service where misuse, abuse, fraud, chargeback activity, security threats, or violations of these Terms are detected or reasonably suspected.</p>
+  </section>
+
+  <section>
+    <h2>Availability and Changes to the Service</h2>
+    <p>Service availability may change, and features may be updated, modified, suspended, or discontinued at any time. We do not guarantee uninterrupted availability of the service.</p>
+  </section>
+
+  <section>
+    <h2>Changes to These Terms</h2>
+    <p>We may update these Terms from time to time to reflect service changes, operational needs, or legal requirements. When we do, we will revise the “Last Updated” date at the top of this page. Continued use of KundaliScribe after updated Terms become effective constitutes acceptance of the revised Terms, to the extent permitted by law.</p>
+  </section>
+
+  <section>
+    <h2>Limitation of Liability</h2>
+    <p>To the fullest extent permitted by applicable law, KundaliScribe and its operators disclaim liability for any direct, indirect, incidental, consequential, special, or punitive damages arising from the use of the service or reliance on generated reports.</p>
+  </section>
+
+  <section>
+    <h2>Governing Law</h2>
+    <p>These Terms are governed by and interpreted in accordance with the laws of India, without regard to conflict of law principles.</p>
+  </section>
+
+  <section>
+  <h2>Contact</h2>
+  <div class="contact-card">
+    <p style="color: rgba(255,255,255,0.7)">
+      If you have questions, concerns, or requests regarding these Terms, please contact us:
+    </p>
+
+    <p>
+      <strong style="color:white">KundaliScribe</strong><br />
+      Email: <a href="mailto:kundaliscribe@gmail.com">kundaliscribe@gmail.com</a><br />
+      Privacy Policy: <a href="https://kundaliscribe.com/privacy.html">https://kundaliscribe.com/privacy.html</a><br />
+      Delete My Data: <a href="https://kundaliscribe.com/delete-my-data.html">https://kundaliscribe.com/delete-my-data.html</a>
+    </p>
+  </div>
+</section>
+</main>
+
+<footer>
+  &copy; 2026 KundaliScribe &nbsp;·&nbsp; All rights reserved
+</footer>
+
+</body>
+</html>
