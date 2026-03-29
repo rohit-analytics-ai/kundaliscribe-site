@@ -82,10 +82,21 @@
       font-size: 13px;
       color: var(--warm-mid);
       letter-spacing: 0.05em;
+      margin-bottom: 18px;
+    }
+    .nav-line {
       margin-bottom: 40px;
       padding-bottom: 32px;
       border-bottom: 1px solid var(--rule);
+      font-size: 14px;
+      color: var(--warm-mid);
     }
+    .nav-line a {
+      color: var(--gold);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .nav-line a:hover { text-decoration: underline; }
 
     section { margin-bottom: 44px; }
 
@@ -143,6 +154,38 @@
       color: var(--warm-mid);
     }
 
+    .timeline-box {
+      background: rgba(201,168,76,0.05);
+      border: 1px solid var(--rule);
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin: 20px 0;
+    }
+    .timeline-row {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--rule);
+    }
+    .timeline-row:last-child { border-bottom: none; }
+    .timeline-step {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--gold);
+      color: var(--ink);
+      font-size: 12px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .timeline-text { color: #2E2820; font-size: 15px; line-height: 1.6; }
+    .timeline-label { font-weight: 500; }
+    .timeline-sub { color: var(--warm-mid); font-size: 13px; }
+
     .contact-card {
       background: var(--ink);
       border-radius: 10px;
@@ -194,16 +237,22 @@
 
 <main>
   <h1 class="page-title">Delete My Data</h1>
-  <p class="effective">Effective Date: March 27, 2026 &nbsp;·&nbsp; Last Updated: March 27, 2026</p>
+  <p class="effective">Effective Date: March 27, 2026 &nbsp;·&nbsp; Last Updated: March 29, 2026</p>
+  <p class="nav-line">
+    Related pages:
+    <a href="https://kundaliscribe.com/privacy.html">Privacy Policy</a>
+    &nbsp;·&nbsp;
+    <a href="https://kundaliscribe.com/terms.html">Terms of Use</a>
+  </p>
 
   <section>
     <p>If you would like KundaliScribe to delete your personal data, you may submit a deletion request using the contact details below.</p>
-    <p>This page is provided to help you exercise your privacy rights and to support app-store disclosure requirements.</p>
+    <p>This page is provided to help you exercise your privacy rights under applicable data protection law, and to support app-store disclosure requirements including Google Play's data deletion policy.</p>
   </section>
 
   <section>
     <h2>How to Request Deletion</h2>
-    <p>You may request deletion of your personal data by emailing us at <a href="mailto:kundaliscribe@gmail.com">kundaliscribe@gmail.com</a>.</p>
+    <p>Email your deletion request to <a href="mailto:kundaliscribe@gmail.com">kundaliscribe@gmail.com</a> with the subject line: <strong>Data Deletion Request</strong>.</p>
     <div class="highlight-box">
       For faster processing, please send the request from the same email address that you used for your KundaliScribe order whenever possible.
     </div>
@@ -215,12 +264,16 @@
     <ul>
       <li>Your full name</li>
       <li>The email address used for the order</li>
-      <li>Your report ID or order reference, if available</li>
+      <li>Your report ID or order reference, if available (format: KUN-XXXXXXXX)</li>
       <li>A short note requesting deletion of your personal data</li>
     </ul>
 
     <div class="template-box">
-      <pre>Hello, I am requesting deletion of my personal data associated with KundaliScribe.
+      <pre>Subject: Data Deletion Request
+
+Hello,
+
+I am requesting deletion of my personal data associated with KundaliScribe.
 
 Full Name:
 Order Email Address:
@@ -235,33 +288,67 @@ Thank you.</pre>
 
   <section>
     <h2>What Happens Next</h2>
-    <p>We may ask for limited information to verify that you are the rightful requester before processing the deletion request.</p>
-    <p>Once verified, we will process deletion within a reasonable period, subject to any applicable legal, fraud-prevention, payment-dispute, abuse-prevention, messaging-diagnostics, or security retention requirements.</p>
+    <div class="timeline-box">
+      <div class="timeline-row">
+        <div class="timeline-step">1</div>
+        <div class="timeline-text">
+          <div class="timeline-label">Acknowledgement — within 48 hours</div>
+          <div class="timeline-sub">We will confirm receipt of your request and may ask for limited information to verify that you are the rightful requester.</div>
+        </div>
+      </div>
+      <div class="timeline-row">
+        <div class="timeline-step">2</div>
+        <div class="timeline-text">
+          <div class="timeline-label">Processing — within 7 business days</div>
+          <div class="timeline-sub">Once verified, we will process deletion of your personal data from our systems and, where applicable, request deletion from our data processors.</div>
+        </div>
+      </div>
+      <div class="timeline-row">
+        <div class="timeline-step">3</div>
+        <div class="timeline-text">
+          <div class="timeline-label">Confirmation</div>
+          <div class="timeline-sub">We will send you a confirmation once deletion is complete.</div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <section>
     <h2>What May Still Be Retained</h2>
-    <p>Even after a deletion request is processed, KundaliScribe may retain limited records where required for legal compliance, fraud prevention, payment dispute handling, abuse prevention, messaging diagnostics, or security purposes.</p>
+    <p>Even after a deletion request is processed, KundaliScribe may retain limited records where required or permitted by applicable law, including for:</p>
+    <ul>
+      <li>Legal compliance and regulatory obligations</li>
+      <li>Fraud prevention and abuse detection</li>
+      <li>Payment dispute handling and transaction records</li>
+      <li>Security incident investigation</li>
+      <li>Message delivery diagnostics</li>
+    </ul>
+    <p>Where retention is required, we will retain only the minimum data necessary and will not use it for any other purpose.</p>
   </section>
 
   <section>
     <h2>Related Policy</h2>
-    <p>For more information about how KundaliScribe collects, uses, and retains data, please review our <a href="/privacy.html">Privacy Policy</a>.</p>
+    <p>For full details about what data KundaliScribe collects, how it is used, and how it is shared, please review our <a href="https://kundaliscribe.com/privacy.html">Privacy Policy</a>.</p>
   </section>
 
   <section>
     <h2>Contact</h2>
     <div class="contact-card">
-      <span style="color:white">Email: </span> <a href="mailto:kundaliscribe@gmail.com">kundaliscribe@gmail.com</a><br />
-      <span style="color:white">Privacy: </span> <a href="https://kundaliscribe.com/privacy.html">https://kundaliscribe.com/privacy.html</a>
-      <span style="color:white">Terms of Usage: </span> <a href="https://kundaliscribe.com/terms.html">https://kundaliscribe.com/terms.html</a><br />
- 
+      <p style="color: rgba(255,255,255,0.7)">
+        If you have questions or concerns regarding your data deletion request, please contact us:
+      </p>
+      <p>
+        <strong style="color:white">KundaliScribe</strong><br />
+        <span style="color:white">Email: </span> <a href="mailto:kundaliscribe@gmail.com">kundaliscribe@gmail.com</a><br />
+        <span style="color:white">Privacy Policy: </span> <a href="https://kundaliscribe.com/privacy.html">https://kundaliscribe.com/privacy.html</a><br />
+        <span style="color:white">Terms of Use: </span> <a href="https://kundaliscribe.com/terms.html">https://kundaliscribe.com/terms.html</a>
+      </p>
     </div>
   </section>
 </main>
 
 <footer>
-  KUNDALISCRIBE &nbsp;✦&nbsp; PRIVACY REQUESTS
+  &copy; 2026 KundaliScribe &nbsp;·&nbsp; All rights reserved
 </footer>
 
 </body>
