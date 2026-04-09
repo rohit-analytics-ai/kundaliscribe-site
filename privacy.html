@@ -178,6 +178,21 @@
     }
 
     a { color: var(--gold); }
+  
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 20px;
+      justify-content: center;
+      margin-bottom: 12px;
+    }
+    .footer-links a {
+      color: rgba(255,255,255,0.4);
+      text-decoration: none;
+      font-size: 13px;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--gold); }
   </style>
 </head>
 <body>
@@ -255,6 +270,7 @@
       <li><strong>Firebase Cloud Messaging (Google)</strong> — may process app instance identifiers, device tokens, and related technical data needed to deliver push notifications you have enabled. Google may independently process certain data under its own <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>.</li>
       <li><strong>Resend</strong> — may process your email address and report attachment to deliver your PDF report. <a href="https://resend.com/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a></li>
       <li><strong>Google Play</strong> — handles Android in-app purchase processing. We do not receive or store your full payment card details. Google may independently collect data under its own <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>.</li>
+	  <li><strong>Stripe (United States)</strong> — handles web payment processing for reports purchased directly through our website. We do not receive or store your full payment card details. Stripe may independently collect data under its own <a href="https://stripe.com/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>.</li>
       <li><strong>Apple App Store</strong> — handles iOS in-app purchase processing where applicable. We do not receive or store your full payment card details. Apple may independently collect data under its own privacy terms.</li>
       <li><strong>Render (United States)</strong> and related infrastructure providers may temporarily process report data as needed to host our application, generate reports, deliver files, monitor uptime, and maintain technical reliability.</li>
     </ul>
@@ -307,7 +323,7 @@
 
   <section>
     <h2>Data Deletion Requests</h2>
-    <p>You may request deletion of your personal data by emailing us at <a href="mailto:kundaliscribe@gmail.com">kundaliscribe@gmail.com</a> or by submitting a request at <a href="https://kundaliscribe.com/delete-my-data.html">https://kundaliscribe.com/delete-my-data.html</a>. To help us locate your records, please include the email address used for the order and any report reference details available to you.</p>
+    <p>You may request deletion of your personal data by emailing us at <a href="/cdn-cgi/l/email-protection#3f544a515b5e53564c5c4d565d5a7f58525e5653115c5052"><span class="__cf_email__" data-cfemail="244f514a4045484d5747564d4641644349454d480a474b49">[email&#160;protected]</span></a> or by submitting a request at <a href="https://kundaliscribe.com/delete-my-data.html">Delete My Data</a>. To help us locate your records, please include the email address used for the order and any report reference details available to you.</p>
     <p>We will acknowledge your request within 48 hours and complete processing within 7 business days, subject to any applicable legal, fraud-prevention, payment-dispute, or security retention requirements.</p>
   </section>
 
@@ -327,23 +343,17 @@
     <h2>Changes to This Policy</h2>
     <p>We may update this Privacy Policy from time to time. When we do, we will revise the "Last Updated" date at the top of this page. Continued use of KundaliScribe after an updated policy becomes effective constitutes acceptance of the revised policy, to the extent permitted by law.</p>
   </section>
-
-  <section>
-    <h2>Contact Us</h2>
-    <div class="contact-card">
-      <p style="color: rgba(255,255,255,0.7)">If you have questions, concerns, or requests regarding this Privacy Policy or your personal data, please contact us:</p>
-      <p>
-        <strong style="color:white">KundaliScribe</strong><br />
-        <span style="color:white">Email: </span> <a href="mailto:kundaliscribe@gmail.com">kundaliscribe@gmail.com</a><br />
-        <span style="color:white">Terms of Use: </span> <a href="https://kundaliscribe.com/terms.html">https://kundaliscribe.com/terms.html</a><br />
-        <span style="color:white">Delete My Data: </span> <a href="https://kundaliscribe.com/delete-my-data.html">https://kundaliscribe.com/delete-my-data.html</a>
-      </p>
-    </div>
-  </section>
 </main>
 
+
 <footer>
-  &copy; 2026 KundaliScribe &nbsp;·&nbsp; All rights reserved
+  <div class="footer-links">
+    <a href="/privacy.html">Privacy Policy</a>
+    <a href="/terms.html">Terms of Use</a>
+    <a href="/delete-my-data.html">Delete My Data</a>
+    <a href="mailto:kundaliscribe@gmail.com">Support</a>
+  </div>
+  <p style="font-size:12px;color:rgba(255,255,255,0.2)">&copy; 2026 KundaliScribe &nbsp;&middot;&nbsp; All rights reserved</p>
 </footer>
 
 </body>

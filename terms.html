@@ -178,6 +178,21 @@
     }
 
     a { color: var(--gold); }
+  
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 20px;
+      justify-content: center;
+      margin-bottom: 12px;
+    }
+    .footer-links a {
+      color: rgba(255,255,255,0.4);
+      text-decoration: none;
+      font-size: 13px;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--gold); }
   </style>
 </head>
 <body>
@@ -222,7 +237,7 @@
     <h2>Payments and Refunds</h2>
     <p>KundaliScribe provides paid AI-generated astrology reports as one-time digital purchases within the app. Payment processing is handled by the applicable app store provider, such as Google Play or the Apple App Store, and purchases are subject to the billing policies of those platforms.</p>
     <p>Except where required by applicable law, all purchases are final and non-refundable once report generation has begun or the report has been delivered.</p>
-    <p>If you experience a technical issue preventing report delivery, please contact us at <a href="mailto:kundaliscribe@gmail.com">kundaliscribe@gmail.com</a> and we will make reasonable efforts to resolve the issue.</p>
+    <p>If you experience a technical issue preventing report delivery, please contact us at <a href="/cdn-cgi/l/email-protection#2a415f444e4b464359495843484f6a4d474b434604494547"><span class="__cf_email__" data-cfemail="28435d464c4944415b4b5a414a4d684f45494144064b4745">[email&#160;protected]</span></a> and we will make reasonable efforts to resolve the issue.</p>
   </section>
 
   <section>
@@ -274,25 +289,17 @@
     <h2>Governing Law</h2>
     <p>These Terms are governed by and interpreted in accordance with the laws of India, without regard to conflict of law principles, and without prejudice to any mandatory consumer protection rights you may have under the laws of your jurisdiction of residence.</p>
   </section>
-
-  <section>
-    <h2>Contact</h2>
-    <div class="contact-card">
-      <p style="color: rgba(255,255,255,0.7)">
-        If you have questions, concerns, or requests regarding these Terms, please contact us:
-      </p>
-      <p>
-        <strong style="color:white">KundaliScribe</strong><br />
-        <span style="color:white">Email: </span> <a href="mailto:kundaliscribe@gmail.com">kundaliscribe@gmail.com</a><br />
-        <span style="color:white">Privacy Policy: </span> <a href="https://kundaliscribe.com/privacy.html">https://kundaliscribe.com/privacy.html</a><br />
-        <span style="color:white">Delete My Data: </span> <a href="https://kundaliscribe.com/delete-my-data.html">https://kundaliscribe.com/delete-my-data.html</a>
-      </p>
-    </div>
-  </section>
 </main>
 
+
 <footer>
-  &copy; 2026 KundaliScribe &nbsp;·&nbsp; All rights reserved
+  <div class="footer-links">
+    <a href="/privacy.html">Privacy Policy</a>
+    <a href="/terms.html">Terms of Use</a>
+    <a href="/delete-my-data.html">Delete My Data</a>
+    <a href="mailto:kundaliscribe@gmail.com">Support</a>
+  </div>
+  <p style="font-size:12px;color:rgba(255,255,255,0.2)">&copy; 2026 KundaliScribe &nbsp;&middot;&nbsp; All rights reserved</p>
 </footer>
 
 </body>
