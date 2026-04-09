@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Report Confirmed — KundaliScribe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --gold:       #C9A84C;
+      --gold-light: #E8C97A;
+      --ink:        #1A1410;
+      --parchment:  #FAF6EE;
+      --warm-mid:   #6B5B3E;
+      --rule:       rgba(201,168,76,0.25);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--parchment);
+      color: var(--ink);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      line-height: 1.75;
+      font-size: 16px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ── Header ── */
+    header {
+      background: var(--ink);
+      padding: 28px 24px;
+      text-align: center;
+    }
+    .brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 28px;
+      font-weight: 600;
+      color: var(--gold-light);
+      letter-spacing: 0.04em;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    /* ── Main ── */
+    main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 48px 24px;
+    }
+
+    .card {
+      max-width: 520px;
+      width: 100%;
+      text-align: center;
+    }
+
+    /* ── States ── */
+    .state { display: none; }
+    .state.active { display: block; }
+
+    /* Loading state */
+    .spinner {
+      width: 48px;
+      height: 48px;
+      border: 3px solid var(--rule);
+      border-top-color: var(--gold);
+      border-radius: 50%;
+      animation: spin 0.9s linear infinite;
+      margin: 0 auto 28px;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    .loading-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 26px;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 10px;
+    }
+    .loading-sub {
+      font-size: 15px;
+      color: var(--warm-mid);
+    }
+
+    /* Success state */
+    .om {
+      font-size: 52px;
+      color: var(--gold);
+      display: block;
+      margin-bottom: 20px;
+      animation: fadeIn 0.6s ease;
+    }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+
+    .success-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(26px, 5vw, 38px);
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 14px;
+      animation: fadeIn 0.6s ease 0.1s both;
+    }
+
+    .success-sub {
+      font-size: 16px;
+      color: var(--warm-mid);
+      margin-bottom: 32px;
+      line-height: 1.7;
+      animation: fadeIn 0.6s ease 0.2s both;
+    }
+
+    .info-box {
+      background: rgba(201,168,76,0.08);
+      border: 1px solid var(--rule);
+      border-radius: 8px;
+      padding: 20px 24px;
+      margin-bottom: 28px;
+      text-align: left;
+      animation: fadeIn 0.6s ease 0.3s both;
+    }
+    .info-box-label {
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 10px;
+      display: block;
+    }
+    .info-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      color: var(--warm-mid);
+      padding: 5px 0;
+      border-bottom: 1px solid var(--rule);
+    }
+    .info-row:last-child { border-bottom: none; }
+    .info-row strong {
+      color: var(--ink);
+      font-weight: 500;
+      font-family: monospace;
+      font-size: 12px;
+    }
+
+    .email-note {
+      font-size: 14px;
+      color: var(--warm-mid);
+      margin-bottom: 32px;
+      animation: fadeIn 0.6s ease 0.35s both;
+    }
+    .email-note span {
+      color: var(--ink);
+      font-weight: 500;
+    }
+
+    .steps {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 36px;
+      text-align: left;
+      animation: fadeIn 0.6s ease 0.4s both;
+    }
+    .step-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+    .step-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--rule);
+      line-height: 1.2;
+      min-width: 24px;
+    }
+    .step-text {
+      font-size: 14px;
+      color: var(--warm-mid);
+      line-height: 1.6;
+      padding-top: 2px;
+    }
+
+    .btn-home {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 13px 32px;
+      border-radius: 3px;
+      background: var(--gold);
+      color: var(--ink);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-decoration: none;
+      transition: opacity 0.2s;
+      animation: fadeIn 0.6s ease 0.45s both;
+    }
+    .btn-home:hover { opacity: 0.85; }
+
+    /* Error state */
+    .error-icon {
+      font-size: 40px;
+      margin-bottom: 20px;
+      display: block;
+    }
+    .error-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 28px;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 12px;
+    }
+    .error-sub {
+      font-size: 15px;
+      color: var(--warm-mid);
+      margin-bottom: 28px;
+      line-height: 1.7;
+    }
+    .error-detail {
+      font-size: 12px;
+      font-family: monospace;
+      color: var(--warm-mid);
+      background: rgba(201,168,76,0.06);
+      border: 1px solid var(--rule);
+      border-radius: 4px;
+      padding: 12px 16px;
+      margin-bottom: 28px;
+      word-break: break-all;
+    }
+    .btn-retry {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 28px;
+      border-radius: 3px;
+      background: transparent;
+      color: var(--gold);
+      border: 1px solid rgba(201,168,76,0.4);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-decoration: none;
+      cursor: pointer;
+      transition: border-color 0.2s;
+      margin-right: 12px;
+    }
+    .btn-retry:hover { border-color: var(--gold); }
+
+    /* ── Footer ── */
+    footer {
+      background: var(--ink);
+      padding: 28px 24px;
+      text-align: center;
+    }
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 20px;
+      justify-content: center;
+      margin-bottom: 12px;
+    }
+    .footer-links a {
+      color: rgba(255,255,255,0.4);
+      text-decoration: none;
+      font-size: 13px;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--gold); }
+    .footer-copy {
+      font-size: 12px;
+      color: rgba(255,255,255,0.2);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="/" class="brand">KundaliScribe</a>
+  </header>
+
+  <main>
+    <div class="card">
+
+      <!-- Loading state -->
+      <div class="state active" id="state-loading">
+        <div class="spinner"></div>
+        <p class="loading-title">Confirming your payment…</p>
+        <p class="loading-sub">Please wait a moment while we verify your order.</p>
+      </div>
+
+      <!-- Success state -->
+      <div class="state" id="state-success">
+        <span class="om">ॐ</span>
+        <h1 class="success-title">Your Report is Being Prepared</h1>
+        <p class="success-sub">
+          Payment confirmed. Your personalised Vedic birth chart report
+          is now being generated by our AI.
+        </p>
+
+        <div class="info-box" id="info-box" style="display:none">
+          <span class="info-box-label">Order Details</span>
+          <div class="info-row">
+            <span>Chart ID</span>
+            <strong id="chart-id-display">—</strong>
+          </div>
+          <div class="info-row">
+            <span>Status</span>
+            <strong>Generating</strong>
+          </div>
+        </div>
+
+        <p class="email-note">
+          Your PDF will arrive at <span id="email-display">your inbox</span>
+          within a few minutes. Check your spam folder if you don't see it.
+        </p>
+
+        <div class="steps">
+          <div class="step-row">
+            <span class="step-num">01</span>
+            <span class="step-text">Our AI is interpreting your birth chart using Vedic astrology principles.</span>
+          </div>
+          <div class="step-row">
+            <span class="step-num">02</span>
+            <span class="step-text">Your personalised report is being formatted as a PDF — this takes 2–5 minutes.</span>
+          </div>
+          <div class="step-row">
+            <span class="step-num">03</span>
+            <span class="step-text">The PDF will be emailed directly to you. You can close this page.</span>
+          </div>
+        </div>
+
+        <a href="/" class="btn-home">Back to Home</a>
+      </div>
+
+      <!-- Error state -->
+      <div class="state" id="state-error">
+        <span class="error-icon">✦</span>
+        <h2 class="error-title">Something Went Wrong</h2>
+        <p class="error-sub" id="error-message">
+          We couldn't confirm your payment. Your card has not been charged.
+          Please try again or contact support.
+        </p>
+        <div class="error-detail" id="error-detail" style="display:none"></div>
+        <a href="/" class="btn-retry">Try Again</a>
+        <a href="mailto:kundaliscribe@gmail.com" class="btn-home">Contact Support</a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-links">
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/terms.html">Terms of Use</a>
+      <a href="mailto:kundaliscribe@gmail.com">Support</a>
+    </div>
+    <p class="footer-copy">© 2026 KundaliScribe. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const TEASER_URL = 'https://kundali-teaser-server.onrender.com';
+
+    function showState(id) {
+      document.querySelectorAll('.state').forEach(el => el.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+
+    function showError(message, detail) {
+      document.getElementById('error-message').textContent =
+        message || 'We could not confirm your payment. Please contact support.';
+      const detailEl = document.getElementById('error-detail');
+      if (detail) {
+        detailEl.textContent = detail;
+        detailEl.style.display = 'block';
+      }
+      showState('state-error');
+    }
+
+    async function confirmPayment(sessionId) {
+      try {
+        const res = await fetch(`${TEASER_URL}/api/web-purchase/confirm`, {
+          method:  'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body:    JSON.stringify({ sessionId }),
+        });
+
+        const json = await res.json();
+
+        if (!res.ok || !json.success) {
+          const code = json?.error?.code    || 'UNKNOWN_ERROR';
+          const msg  = json?.error?.message || 'Payment confirmation failed.';
+
+          // Already processed — still show success (dedup case)
+          if (json?.data?.alreadyProcessed) {
+            showSuccess(json.data);
+            return;
+          }
+
+          showError(msg, `Error code: ${code}`);
+          return;
+        }
+
+        showSuccess(json.data);
+
+      } catch (err) {
+        showError(
+          'Could not reach the server to confirm your payment. ' +
+          'Your report may still be processing — check your email in a few minutes.',
+          err.message
+        );
+      }
+    }
+
+    function showSuccess(data) {
+      // Show chart ID if available
+      if (data?.chartId) {
+        document.getElementById('chart-id-display').textContent = data.chartId;
+        document.getElementById('info-box').style.display = 'block';
+      }
+      showState('state-success');
+    }
+
+    // ── Init ──────────────────────────────────────────────────────────────────
+    (function init() {
+      const params    = new URLSearchParams(window.location.search);
+      const sessionId = params.get('session_id');
+      const cancelled = params.get('cancelled');
+      const isTest    = params.get('test') === 'true';
+
+      // User cancelled at Stripe checkout
+      if (cancelled) {
+        showError('Payment was cancelled. You have not been charged.');
+        return;
+      }
+
+      // No session ID — shouldn't happen in normal flow
+      if (!sessionId) {
+        showError('No order reference found. If you completed payment, check your email.');
+        return;
+      }
+
+      // TEST_MODE mock session — show success without calling server
+      if (isTest && sessionId.startsWith('cs_test_mock_')) {
+        console.log('[Confirmation] TEST_MODE mock session — showing success directly');
+        showSuccess({ chartId: null });
+        return;
+      }
+
+      // Normal flow — call /confirm with the session ID
+      confirmPayment(sessionId);
+    })();
+  </script>
+
+</body>
+</html>
