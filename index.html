@@ -439,7 +439,7 @@
       <a href="/privacy.html">Privacy Policy</a>
       <a href="/terms.html">Terms of Use</a>
       <a href="/delete-my-data.html">Delete My Data</a>
-      <a href="mailto:kundaliscribe@gmail.com">Support</a>
+      <a href="mailto:support@kundali.app">Support</a>
     </div>
     <p class="footer-copy">© 2026 KundaliScribe. All rights reserved. For entertainment and personal insight purposes only.</p>
   </footer>
@@ -930,6 +930,7 @@
         });
 
         const json = await res.json();
+        console.log('[KundaliScribe] Checkout response:', JSON.stringify(json));
 
         if (!res.ok || !json.success) {
           setLoading(false);
@@ -937,7 +938,12 @@
         }
 
         // Redirect to Stripe checkout
-        window.location.href = json.url;
+        const redirectUrl = json.data?.url;
+        if (!redirectUrl) {
+          setLoading(false);
+          return showError('Payment session created but redirect URL was missing. Please try again.');
+        }
+        window.location.href = redirectUrl;
 
       } catch (err) {
         setLoading(false);
