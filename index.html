@@ -363,7 +363,7 @@
     <div class="price-callout">
       <span class="section-label">Web Report</span>
       <h2>Your Kundali, Delivered to Your Inbox</h2>
-      <p>No app needed. Enter your birth details, pay once, receive your full AI-written Vedic report as a PDF. Introductory price - </p>
+      <p>No app needed. Enter your birth details, pay once, receive your full AI-written Vedic report as a PDF. Introductory price $2.99.</p>
       <span class="price-tag">$2.99</span>
       <span class="price-note">One-time · PDF via email · No account needed</span>
       <button class="btn btn-primary" onclick="openModal()">Get My Report</button>
@@ -427,7 +427,7 @@
           <span class="badge-icon">▶</span> Google Play — Coming Soon
         </a>
         <a href="#" class="badge" style="opacity:0.4;cursor:default;">
-          <span class="badge-icon"></span> App Store — Coming Soon
+          <span class="badge-icon">🍎</span> App Store — Coming Soon
         </a>
       </div>
     </div>
@@ -439,7 +439,7 @@
       <a href="/privacy.html">Privacy Policy</a>
       <a href="/terms.html">Terms of Use</a>
       <a href="/delete-my-data.html">Delete My Data</a>
-      <a href="/cdn-cgi/l/email-protection#f59e809b9194999c8696879c9790b59298949c99db969a98">Support</a>
+      <a href="mailto:kundaliscribe@gmail.com">Support</a>
     </div>
     <p class="footer-copy">© 2026 KundaliScribe. All rights reserved. For entertainment and personal insight purposes only.</p>
   </footer>
@@ -596,15 +596,8 @@
   </div>
 
   <script>
-    // Load Cloudflare email-decode non-blocking (only present on live Cloudflare hosting)
-    (function() {
-      var s = document.createElement('script');
-      s.src = '/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js';
-      s.setAttribute('data-cfasync', 'false');
-      document.head.appendChild(s);
-    })();
-  </script>
-  <script>
+    // Load Cloudflare email-decode non-blocking
+    (function() { var s=document.createElement("script"); s.src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"; s.setAttribute("data-cfasync","false"); document.head.appendChild(s); })();
     const TEASER_URL = 'https://kundali-teaser-server.onrender.com';
 
     // ── City DB ───────────────────────────────────────────────────────────────
@@ -940,4 +933,17 @@
 
         if (!res.ok || !json.success) {
           setLoading(false);
-          return showError(json?.error?.message || 'Something went wrong. Please try 
+          return showError(json?.error?.message || 'Something went wrong. Please try again.');
+        }
+
+        // Redirect to Stripe checkout
+        window.location.href = json.url;
+
+      } catch (err) {
+        setLoading(false);
+        showError('Network error. Please check your connection and try again.');
+      }
+    }
+  </script>
+</body>
+</html>
