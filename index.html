@@ -349,7 +349,7 @@
 <body>
 
   <header>
-    <span class="brand">KundaliScribe</span>
+    <a href="/" class="brand" style="text-decoration:none">KundaliScribe</a>
     <span class="brand-sub">AI Vedic Birth Chart Reports</span>
     <span class="ornament">✦ ✦ ✦</span>
     <p class="hero-text">Your birth chart, interpreted through the ancient lens of Vedic astrology — written by AI, personalised to you.</p>
@@ -549,7 +549,7 @@
 
       <!-- Consent checkbox — text matches purchase_screen.dart line 565 exactly -->
       <div class="consent-row" id="consent-row" onclick="toggleConsent()">
-        <input type="checkbox" id="f-consent" onclick="event.stopPropagation();toggleConsent()" />
+        <input type="checkbox" id="f-consent" onclick="event.stopPropagation();toggleConsent(true)" />
         <label for="f-consent" onclick="event.preventDefault()">
           I understand that my birth data will be shared with secure third-party services
           solely for analysis &amp; report generation. Report and birth data will be deleted 
@@ -582,7 +582,7 @@
         this information for astrology report generation.
       </p>
       <div class="consent-row" id="guardian-row" onclick="toggleGuardian()" style="margin-bottom:0">
-        <input type="checkbox" id="f-guardian" onclick="event.stopPropagation();toggleGuardian()" />
+        <input type="checkbox" id="f-guardian" onclick="event.stopPropagation();toggleGuardian(true)" />
         <label for="f-guardian" onclick="event.preventDefault()">
           I confirm I am the parent or legal guardian
         </label>
@@ -726,10 +726,12 @@
     document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
 
     // ── Consent ───────────────────────────────────────────────────────────────
-    function toggleConsent() {
+    function toggleConsent(fromCheckbox) {
       const cb  = document.getElementById('f-consent');
       const row = document.getElementById('consent-row');
-      cb.checked = !cb.checked;
+      // When called from checkbox onclick, browser already toggled cb.checked
+      // When called from row onclick, we need to toggle it ourselves
+      if (!fromCheckbox) cb.checked = !cb.checked;
       row.classList.toggle('checked', cb.checked);
     }
 
@@ -743,10 +745,10 @@
       document.getElementById('minor-dialog').classList.add('open');
       return new Promise(resolve => { _guardianResolve = resolve; });
     }
-    function toggleGuardian() {
+    function toggleGuardian(fromCheckbox) {
       const cb  = document.getElementById('f-guardian');
       const row = document.getElementById('guardian-row');
-      cb.checked = !cb.checked;
+      if (!fromCheckbox) cb.checked = !cb.checked;
       row.classList.toggle('checked', cb.checked);
       document.getElementById('guardian-confirm-btn').disabled = !cb.checked;
     }
@@ -936,11 +938,4 @@
         window.location.href = json.data.url;
 
       } catch (err) {
-        setLoading(false);
-        showError('Could not reach the payment server. Please check your connection and try again.');
-      }
-    }
-  </script>
-
-</body>
-</html>
+        setLoading
