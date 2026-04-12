@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>KundaliScribe — AI Vedic Birth Chart Reports</title>
+  <meta name="description" content="Get your personalised Vedic Kundali birth chart report — AI-written, not copy-pasted. Available on web and Android. Includes Lagna, yogas, doshas, divisional charts and more." />
+  <title>KundaliScribe — AI Vedic Birth Chart Reports | Android App</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -355,7 +356,7 @@
     <p class="hero-text">Your birth chart, interpreted through the ancient lens of Vedic astrology — written by AI, personalised to you.</p>
     <div class="cta-group">
       <button class="btn btn-primary" onclick="openModal()">Get My Report — Introductory price - $2.99</button>
-      
+      <a class="btn btn-secondary" href="https://play.google.com/store/apps/details?id=com.kundaliscribe.app" target="_blank" rel="noopener">▶ Download Android App</a>
     </div>
   </header>
 
@@ -420,11 +421,11 @@
     </div>
 
     <div class="app-section">
-      <h2>Coming Soon on Android &amp; iOS</h2>
-      <p>Our mobile apps are on the way. Get your report on the web today.</p>
+      <h2>Also Available on Android</h2>
+      <p>Get the full app experience — free teaser chart, premium report, and ask your chart Q&amp;A. iOS coming soon.</p>
       <div class="badge-row">
-        <a href="#" class="badge" style="opacity:0.4;cursor:default;">
-          <span class="badge-icon">▶</span> Google Play — Coming Soon
+        <a href="https://play.google.com/store/apps/details?id=com.kundaliscribe.app" class="badge" target="_blank" rel="noopener">
+          <span class="badge-icon">▶</span> Get it on Google Play
         </a>
         <a href="#" class="badge" style="opacity:0.4;cursor:default;">
           <span class="badge-icon">🍎</span> App Store — Coming Soon
@@ -439,7 +440,7 @@
       <a href="/privacy.html">Privacy Policy</a>
       <a href="/terms.html">Terms of Use</a>
       <a href="/delete-my-data.html">Delete My Data</a>
-      <a href="mailto:support@kundali.app">Support</a>
+      <a href="/cdn-cgi/l/email-protection#50232520203f2224103b253e34313c397e312020">Support</a>
     </div>
     <p class="footer-copy">© 2026 KundaliScribe. All rights reserved. For entertainment and personal insight purposes only.</p>
   </footer>
@@ -595,7 +596,7 @@
     </div>
   </div>
 
-  <script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     // Load Cloudflare email-decode non-blocking
     (function() { var s=document.createElement("script"); s.src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"; s.setAttribute("data-cfasync","false"); document.head.appendChild(s); })();
     const TEASER_URL = 'https://kundali-teaser-server.onrender.com';
@@ -946,10 +947,3 @@
         window.location.href = redirectUrl;
 
       } catch (err) {
-        setLoading(false);
-        showError('Network error. Please check your connection and try again.');
-      }
-    }
-  </script>
-</body>
-</html>
