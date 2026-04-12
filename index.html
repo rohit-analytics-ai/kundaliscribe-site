@@ -947,3 +947,11 @@
         window.location.href = redirectUrl;
 
       } catch (err) {
+
+        setLoading(false);
+        showError('Network error — please check your connection and try again.');
+      }
+    }
+  </script>
+</body>
+</html>
