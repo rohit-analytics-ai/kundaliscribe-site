@@ -1,0 +1,1423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Preview a sample KundaliScribe Vedic birth chart report — see the depth and quality of your personalised AI-written Kundali analysis before you buy." />
+  <title>Sample Report Preview — KundaliScribe Vedic Astrology</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&family=Noto+Sans+Devanagari:wght@400;600&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --gold:        #C9A84C;
+      --gold-light:  #E8C97A;
+      --gold-pale:   #F5E6B8;
+      --ink:         #1A1410;
+      --navy:        #0A0E1A;
+      --card:        #141B2D;
+      --card-light:  #1E2640;
+      --cream:       #F0E6D3;
+      --muted:       #8B95A8;
+      --warm-mid:    #6B5B3E;
+      --parchment:   #FAF6EE;
+      --teal:        #4EC9B0;
+      --rule:        rgba(201,168,76,0.2);
+      --blur-color:  rgba(10,14,26,0.92);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--navy);
+      color: var(--cream);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      line-height: 1.75;
+      font-size: 15px;
+    }
+
+    /* ── Site header ── */
+    .site-header {
+      background: var(--ink);
+      padding: 18px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--rule);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .site-header a.brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--gold-light);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+    }
+    .site-header .back-link {
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .site-header .back-link:hover { color: var(--gold); }
+    .header-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 20px;
+      background: var(--gold);
+      color: var(--ink);
+      border-radius: 3px;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    .header-cta:hover { opacity: 0.85; }
+
+    /* ── Hero banner ── */
+    .preview-banner {
+      background: linear-gradient(135deg, #0A0E1A 0%, #141B2D 100%);
+      border-bottom: 1px solid var(--rule);
+      padding: 40px 32px 36px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .preview-banner::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 60% 100% at 50% -20%, rgba(201,168,76,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .preview-banner .eyebrow {
+      font-size: 11px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+      display: block;
+    }
+    .preview-banner h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(26px, 4vw, 40px);
+      font-weight: 600;
+      color: var(--gold-light);
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
+    .preview-banner p {
+      color: rgba(240,230,211,0.6);
+      font-size: 14px;
+      max-width: 520px;
+      margin: 0 auto 24px;
+      line-height: 1.6;
+    }
+    .sample-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(201,168,76,0.12);
+      border: 1px solid rgba(201,168,76,0.3);
+      color: var(--gold);
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 20px;
+    }
+
+    /* ── Report wrapper ── */
+    .report-wrapper {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 16px 80px;
+    }
+
+    /* ── Individual report pages ── */
+    .report-page {
+      background: white;
+      color: #333;
+      margin: 32px 0;
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+      font-family: 'Cormorant Garamond', serif;
+    }
+
+    /* Page header (matches report's running head) */
+    .rpage-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 24px;
+      border-bottom: 1px solid #eee;
+      font-size: 9px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #aaa;
+      font-family: 'DM Sans', sans-serif;
+    }
+
+    .rpage-body {
+      padding: 32px 40px 40px;
+    }
+
+    /* ── Cover page styles ── */
+    .cover-page {
+      background: #fff;
+      text-align: center;
+      padding: 56px 40px 48px;
+    }
+    .cover-label {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 9px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #aaa;
+      border: 1px solid #ddd;
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+    .cover-om {
+      font-family: 'Noto Sans Devanagari', serif;
+      font-size: 42px;
+      color: #C9A84C;
+      display: block;
+      margin-bottom: 16px;
+    }
+    .cover-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 42px;
+      font-weight: 600;
+      color: #2C1810;
+      margin-bottom: 8px;
+    }
+    .cover-tagline {
+      font-size: 14px;
+      color: #888;
+      margin-bottom: 32px;
+    }
+    .cover-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      max-width: 520px;
+      margin: 0 auto 24px;
+    }
+    .cover-cell {
+      border: 1px solid #e8ddd0;
+      border-radius: 4px;
+      padding: 14px 16px;
+      text-align: left;
+    }
+    .cover-cell-label {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 8px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #C9A84C;
+      display: block;
+      margin-bottom: 4px;
+    }
+    .cover-cell-value {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px;
+      color: #2C1810;
+    }
+    .cover-birth {
+      font-size: 13px;
+      color: #888;
+      margin-bottom: 6px;
+    }
+    .cover-insight {
+      font-style: italic;
+      font-size: 13px;
+      color: #C9A84C;
+    }
+    .cover-report-id {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 9px;
+      letter-spacing: 0.14em;
+      color: #bbb;
+      margin-top: 20px;
+    }
+
+    /* ── Section heading (inside report pages) ── */
+    .sec-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: #C9A84C;
+      margin-bottom: 4px;
+    }
+    .sec-lead {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 15px;
+      font-weight: 600;
+      color: #2C1810;
+      line-height: 1.4;
+      margin-bottom: 16px;
+      border-bottom: 1px solid #e8ddd0;
+      padding-bottom: 12px;
+    }
+    .body-text {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13px;
+      color: #444;
+      line-height: 1.75;
+      margin-bottom: 12px;
+    }
+
+    /* ── Planet table ── */
+    .planet-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 12px;
+      margin-top: 8px;
+    }
+    .planet-table thead tr {
+      background: #C9A84C;
+      color: white;
+    }
+    .planet-table th {
+      padding: 8px 10px;
+      text-align: left;
+      font-weight: 500;
+      font-size: 11px;
+      letter-spacing: 0.06em;
+    }
+    .planet-table td {
+      padding: 10px 10px;
+      border-bottom: 1px solid #f0e8df;
+      color: #333;
+      vertical-align: top;
+    }
+    .planet-table tr:nth-child(even) td { background: #faf6f0; }
+    .planet-name { font-weight: 600; color: #2C1810; }
+    .planet-devanagari { display: block; font-family: 'Noto Sans Devanagari', sans-serif; font-size: 11px; color: #C9A84C; }
+    .status-exalted { color: #2a7a2a; font-weight: 500; }
+    .status-friendly { color: #5a7ec0; }
+    .status-own { color: #9b59b6; }
+
+    /* ── Snapshot chips ── */
+    .chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+    .chip {
+      background: #f8f3ec;
+      border: 1px solid #e8ddd0;
+      border-radius: 20px;
+      padding: 5px 12px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 12px;
+      color: #555;
+    }
+    .chip strong { color: #C9A84C; font-weight: 500; }
+
+    /* ── Priority signals ── */
+    .signal-box {
+      border: 1px solid #e8ddd0;
+      border-radius: 4px;
+      padding: 16px 20px;
+      margin-bottom: 12px;
+    }
+    .signal-box h4 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 9px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #C9A84C;
+      margin-bottom: 10px;
+    }
+    .signal-list {
+      list-style: none;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 12px;
+      color: #444;
+    }
+    .signal-list li {
+      padding: 3px 0;
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+    }
+    .signal-list li::before { content: '•'; color: #C9A84C; }
+
+    /* ── Two-col layout ── */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+    .two-col-box {
+      border: 1px solid #e8ddd0;
+      border-radius: 4px;
+      padding: 14px 16px;
+    }
+    .two-col-box h4 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 9px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #C9A84C;
+      margin-bottom: 8px;
+    }
+    .two-col-box ul {
+      list-style: none;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 12px;
+      color: #444;
+      line-height: 1.7;
+    }
+    .two-col-box ul li::before { content: '• '; color: #C9A84C; }
+
+    /* ── Callout quote ── */
+    .callout-quote {
+      background: #fdf9f2;
+      border-left: 3px solid #C9A84C;
+      padding: 14px 18px;
+      margin: 16px 0;
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 15px;
+      color: #5a4a35;
+      line-height: 1.6;
+    }
+
+    /* ── Rashi chart SVG ── */
+    .chart-container {
+      border: 1px solid #e8ddd0;
+      border-radius: 4px;
+      padding: 20px;
+      margin: 16px 0;
+      background: #fff;
+    }
+    .chart-caption {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 10px;
+      text-align: center;
+      color: #aaa;
+      margin-top: 10px;
+      letter-spacing: 0.06em;
+    }
+
+    /* ── Contents grid ── */
+    .toc-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13px;
+      color: #555;
+    }
+    .toc-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border: 1px solid #f0e8df;
+      border-radius: 3px;
+    }
+    .toc-icon { font-size: 16px; }
+
+    /* ── Appendix section ── */
+    .appendix-label {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      text-align: center;
+      margin: 48px 0 8px;
+      display: block;
+    }
+    .appendix-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      color: var(--gold-light);
+      text-align: center;
+      margin-bottom: 6px;
+    }
+    .appendix-sub {
+      font-size: 13px;
+      color: var(--muted);
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    /* Strength bar chart (appendix) */
+    .strength-chart {
+      background: white;
+      border-radius: 4px;
+      padding: 24px 28px;
+      margin-bottom: 16px;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+    }
+    .strength-chart h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 17px;
+      color: #C9A84C;
+      margin-bottom: 4px;
+    }
+    .strength-chart .s-lead {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 11px;
+      color: #aaa;
+      margin-bottom: 18px;
+      letter-spacing: 0.04em;
+    }
+    .bar-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    .bar-label {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      width: 72px;
+      color: #333;
+      flex-shrink: 0;
+    }
+    .bar-label span {
+      font-family: 'Noto Sans Devanagari', sans-serif;
+      font-size: 10px;
+      color: #C9A84C;
+      display: block;
+    }
+    .bar-track {
+      flex: 1;
+      height: 8px;
+      background: #f0e8df;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .bar-fill {
+      height: 100%;
+      border-radius: 4px;
+      transition: width 0.8s ease;
+    }
+    .bar-fill.strong  { background: #4EC9B0; }
+    .bar-fill.mid     { background: #C9A84C; }
+    .bar-fill.weak    { background: #d0776a; }
+    .bar-val {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 11px;
+      color: #888;
+      width: 56px;
+      text-align: right;
+      flex-shrink: 0;
+    }
+
+    /* Dasha timeline (appendix) */
+    .dasha-chart {
+      background: white;
+      border-radius: 4px;
+      padding: 24px 28px;
+      margin-bottom: 16px;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+      overflow-x: auto;
+    }
+    .dasha-chart h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 17px;
+      color: #C9A84C;
+      margin-bottom: 4px;
+    }
+    .dasha-chart .s-lead {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 11px;
+      color: #aaa;
+      margin-bottom: 18px;
+    }
+    .dasha-timeline {
+      display: flex;
+      height: 40px;
+      border-radius: 4px;
+      overflow: hidden;
+      min-width: 500px;
+    }
+    .dasha-seg {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 11px;
+      font-weight: 500;
+      color: white;
+      position: relative;
+      flex-shrink: 0;
+    }
+    .dasha-seg.completed { opacity: 0.6; }
+    .dasha-seg.current   { outline: 3px solid #fff; outline-offset: -3px; }
+    .dasha-years {
+      display: flex;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 9px;
+      color: #aaa;
+      margin-top: 4px;
+      min-width: 500px;
+    }
+    .dasha-year-mark { flex-shrink: 0; }
+    .dasha-current-box {
+      background: #fdf9f2;
+      border: 1px solid #e8ddd0;
+      border-radius: 4px;
+      padding: 12px 16px;
+      margin-top: 14px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 12px;
+      color: #444;
+    }
+    .dasha-current-box strong { color: #C9A84C; }
+
+    /* ── PAYWALL ── */
+    .paywall-wrapper {
+      position: relative;
+      margin: 0;
+    }
+    .paywall-blur {
+      filter: blur(4px);
+      pointer-events: none;
+      user-select: none;
+      -webkit-user-select: none;
+      opacity: 0.5;
+    }
+    .paywall-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(to bottom, rgba(10,14,26,0) 0%, rgba(10,14,26,0.85) 30%, rgba(10,14,26,0.97) 100%);
+      padding: 32px;
+      text-align: center;
+      z-index: 10;
+    }
+    .paywall-icon { font-size: 32px; margin-bottom: 12px; }
+    .paywall-overlay h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(22px, 3vw, 30px);
+      color: var(--gold-light);
+      margin-bottom: 10px;
+    }
+    .paywall-overlay p {
+      font-size: 14px;
+      color: rgba(240,230,211,0.65);
+      max-width: 400px;
+      margin: 0 auto 24px;
+      line-height: 1.6;
+    }
+    .paywall-sections {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+      margin-bottom: 28px;
+    }
+    .paywall-tag {
+      background: rgba(201,168,76,0.1);
+      border: 1px solid rgba(201,168,76,0.25);
+      color: var(--gold);
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      padding: 4px 12px;
+      border-radius: 20px;
+    }
+    .paywall-price {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 44px;
+      color: var(--gold-light);
+      display: block;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .paywall-note {
+      font-size: 11px;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+      margin-bottom: 20px;
+      display: block;
+    }
+    .btn-paywall {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 32px;
+      background: var(--gold);
+      color: var(--ink);
+      border-radius: 3px;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-decoration: none;
+      transition: opacity 0.2s;
+      border: none;
+      cursor: pointer;
+    }
+    .btn-paywall:hover { opacity: 0.85; }
+    .btn-paywall-sec {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      background: transparent;
+      color: var(--gold-light);
+      border: 1px solid rgba(201,168,76,0.35);
+      border-radius: 3px;
+      font-size: 13px;
+      font-weight: 400;
+      letter-spacing: 0.06em;
+      text-decoration: none;
+      transition: opacity 0.2s;
+      margin-top: 12px;
+    }
+    .btn-paywall-sec:hover { opacity: 0.75; }
+    .paywall-btns { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+
+    /* ── Footer ── */
+    .site-footer {
+      background: var(--ink);
+      padding: 32px 24px;
+      text-align: center;
+      border-top: 1px solid var(--rule);
+      margin-top: 80px;
+    }
+    .site-footer .brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px;
+      color: var(--gold-light);
+      display: block;
+      margin-bottom: 12px;
+    }
+    .site-footer .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-bottom: 16px;
+    }
+    .site-footer .links a {
+      font-size: 12px;
+      color: rgba(255,255,255,0.35);
+      text-decoration: none;
+    }
+    .site-footer .links a:hover { color: var(--gold); }
+    .site-footer .copy {
+      font-size: 11px;
+      color: rgba(255,255,255,0.2);
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      .site-header { padding: 14px 16px; gap: 8px; }
+      .header-cta { display: none; }
+      .rpage-body { padding: 20px 20px 28px; }
+      .two-col { grid-template-columns: 1fr; }
+      .cover-grid { grid-template-columns: 1fr 1fr; }
+      .toc-grid { grid-template-columns: 1fr; }
+      .preview-banner { padding: 28px 20px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Site header -->
+  <header class="site-header">
+    <a href="/" class="brand">KundaliScribe</a>
+    <a href="/" class="back-link">← Back to home</a>
+    <a href="/" class="header-cta" onclick="sessionStorage.setItem('openModal','1'); return true;">Get My Report — $2.99</a>
+  </header>
+
+  <!-- Preview banner -->
+  <div class="preview-banner">
+    <span class="eyebrow">Sample Report Preview</span>
+    <h1>See What Your Report Looks Like</h1>
+    <p>This is a real KundaliScribe report for a sample chart (John Doe · Jan 1 1983 · Varanasi). Your report is personalised to your exact birth details.</p>
+    <span class="sample-badge">✦ &nbsp; 40+ page Vedic analysis · Lahiri ayanamsa · Whole-sign houses</span>
+  </div>
+
+  <div class="report-wrapper">
+
+    <!-- ════════════════════════════════════════
+         PAGE 1 — COVER
+    ═══════════════════════════════════════════ -->
+    <div class="report-page">
+      <div class="rpage-head">
+        <span>KundaliScribe · Premium Report</span>
+        <span>John Doe · 1983-01-01</span>
+        <span>For spiritual guidance only</span>
+      </div>
+      <div class="cover-page">
+        <span class="cover-label">Kundali Scribe · Premium Report</span>
+        <span class="cover-om">ॐ गणेशाय नमः</span>
+        <div class="cover-name">John Doe</div>
+        <div class="cover-tagline">Personalised Vedic birth chart analysis · Lahiri ayanamsa · Whole-sign houses</div>
+        <div class="cover-grid">
+          <div class="cover-cell">
+            <span class="cover-cell-label">Ascendant</span>
+            <span class="cover-cell-value">Sagittarius</span>
+          </div>
+          <div class="cover-cell">
+            <span class="cover-cell-label">Moon Sign</span>
+            <span class="cover-cell-value">Cancer</span>
+          </div>
+          <div class="cover-cell">
+            <span class="cover-cell-label">Sun Sign</span>
+            <span class="cover-cell-value">Sagittarius</span>
+          </div>
+          <div class="cover-cell">
+            <span class="cover-cell-label">Nakshatra</span>
+            <span class="cover-cell-value">Pushya</span>
+          </div>
+          <div class="cover-cell">
+            <span class="cover-cell-label">Current Dasha</span>
+            <span class="cover-cell-value" style="font-size:14px;">Venus Mahadasha · <span style="font-family:'Noto Sans Devanagari',serif;color:#C9A84C;font-size:13px;">शुक्र महा दशा</span></span>
+          </div>
+          <div class="cover-cell">
+            <span class="cover-cell-label">Lagna Lord</span>
+            <span class="cover-cell-value">Jupiter (Friendly)</span>
+          </div>
+        </div>
+        <div class="cover-birth">1983-01-01 · 06:45 · Varanasi, India &nbsp;·&nbsp; ♂ Male</div>
+        <div class="cover-insight"><em>Sagittarius rising · Jupiter (Friendly) guides your path · Pushya shapes your emotional world</em></div>
+        <div class="cover-report-id">Report ID: KUN-SAMPLE</div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════
+         PAGE 2 — RASHI CHART
+    ═══════════════════════════════════════════ -->
+    <div class="report-page">
+      <div class="rpage-head">
+        <span>KundaliScribe · Premium Report</span>
+        <span>John Doe · 1983-01-01</span>
+        <span>For spiritual guidance only</span>
+      </div>
+      <div class="rpage-body">
+        <div class="chart-label" style="font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#C9A84C;margin-bottom:16px;">▸ Rashi Chart (D1) — Birth Chart</div>
+        <div class="chart-container" style="padding:12px;background:#FDFAF4;border:1px solid rgba(201,168,76,0.3);border-radius:4px;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 870" style="width:100%;height:auto;display:block;">
+<rect width="840" height="870" fill="#FDFAF4"/>
+<text x="420" y="852" font-size="14" font-family="Georgia,serif" fill="#9a7d40" text-anchor="middle">Rashi Chart (D1) — Birth Chart</text>
+<rect x="60" y="60" width="720" height="720" fill="none" stroke="#8B3A1A" stroke-width="3.2"/>
+<polygon points="420,60 780,420 420,780 60,420" fill="none" stroke="#C9A84C" stroke-width="1.8"/>
+<line x1="60"  y1="60"  x2="420" y2="420" stroke="#C9A84C" stroke-width="1.2" stroke-dasharray="5,4"/>
+<line x1="780" y1="60"  x2="420" y2="420" stroke="#C9A84C" stroke-width="1.2" stroke-dasharray="5,4"/>
+<line x1="780" y1="780" x2="420" y2="420" stroke="#C9A84C" stroke-width="1.2" stroke-dasharray="5,4"/>
+<line x1="60"  y1="780" x2="420" y2="420" stroke="#C9A84C" stroke-width="1.2" stroke-dasharray="5,4"/>
+<polygon points="420,60  780,420 420,420 60,420" fill="rgba(201,168,76,0.14)" stroke="none"/>
+<polygon points="60,60   420,60  420,420" fill="rgba(201,168,76,0.09)" stroke="none"/>
+<polygon points="420,780 60,420  420,420 780,420" fill="rgba(201,168,76,0.09)" stroke="none"/>
+<polygon points="780,780 420,780 420,420" fill="rgba(201,168,76,0.09)" stroke="none"/>
+<polygon points="780,60  420,420 420,60" fill="rgba(201,168,76,0.09)" stroke="none"/>
+<polygon points="780,60  780,420 420,420" fill="rgba(201,168,76,0.09)" stroke="none"/>
+<text x="420" y="88" font-size="15" font-family="Georgia,serif" fill="#8B3A1A" text-anchor="middle" font-weight="bold">Sag</text>
+<text x="264" y="88" font-size="15" font-family="Georgia,serif" fill="#9a7d40" text-anchor="middle">Cap</text>
+<text x="88" y="220" font-size="15" font-family="Georgia,serif" fill="#9a7d40" text-anchor="middle">Aqu</text>
+<text x="88" y="420" font-size="15" font-family="Georgia,serif" fill="#9a7d40" text-anchor="middle">Pis</text>
+<text x="88" y="620" font-size="15" font-family="Georgia,serif" fill="#9a7d40" text-anchor="middle">Ari</text>
+<text x="264" y="752" font-size="15" font-family="Georgia,serif" fill="#9a7d40" text-anchor="middle">Tau</text>
+<text x="420" y="752" font-size="15" font-family="Georgia,serif" fill="#9a7d40" text-anchor="middle">Gem</text>
+<text x="576" y="752" font-size="15" font-family="Georgia,serif" fill="#9a7d40" text-anchor="middle">Can</text>
+<text x="752" y="620" font-size="15" font-family="Georgia,serif" fill="#9a7d40" text-anchor="middle">Leo</text>
+<text x="752" y="420" font-size="15" font-family="Georgia,serif" fill="#9a7d40" text-anchor="middle">Vir</text>
+<text x="752" y="220" font-size="15" font-family="Georgia,serif" fill="#9a7d40" text-anchor="middle">Lib</text>
+<text x="576" y="88" font-size="15" font-family="Georgia,serif" fill="#9a7d40" text-anchor="middle">Sco</text>
+<circle cx="420" cy="136" r="13" fill="#FFF8EE" fill-opacity="0.92" stroke="#8B3A1A" stroke-width="2"/>
+<text x="420" y="136" font-size="11" font-family="Georgia,serif" fill="#8B3A1A" text-anchor="middle" dominant-baseline="middle" font-weight="bold">1</text>
+<circle cx="304" cy="118" r="13" fill="#F5F5F5" fill-opacity="0.92" stroke="#bbb" stroke-width="1"/>
+<text x="304" y="118" font-size="11" font-family="Georgia,serif" fill="#666" text-anchor="middle" dominant-baseline="middle">2</text>
+<circle cx="118" cy="126" r="13" fill="#F5F5F5" fill-opacity="0.92" stroke="#bbb" stroke-width="1"/>
+<text x="118" y="126" font-size="11" font-family="Georgia,serif" fill="#666" text-anchor="middle" dominant-baseline="middle">3</text>
+<circle cx="154" cy="420" r="13" fill="#F5F5F5" fill-opacity="0.92" stroke="#bbb" stroke-width="1"/>
+<text x="154" y="420" font-size="11" font-family="Georgia,serif" fill="#666" text-anchor="middle" dominant-baseline="middle">4</text>
+<circle cx="118" cy="714" r="13" fill="#F5F5F5" fill-opacity="0.92" stroke="#bbb" stroke-width="1"/>
+<text x="118" y="714" font-size="11" font-family="Georgia,serif" fill="#666" text-anchor="middle" dominant-baseline="middle">5</text>
+<circle cx="302" cy="722" r="13" fill="#F5F5F5" fill-opacity="0.92" stroke="#bbb" stroke-width="1"/>
+<text x="302" y="722" font-size="11" font-family="Georgia,serif" fill="#666" text-anchor="middle" dominant-baseline="middle">6</text>
+<circle cx="420" cy="704" r="13" fill="#F5F5F5" fill-opacity="0.92" stroke="#bbb" stroke-width="1"/>
+<text x="420" y="704" font-size="11" font-family="Georgia,serif" fill="#666" text-anchor="middle" dominant-baseline="middle">7</text>
+<circle cx="538" cy="722" r="13" fill="#F5F5F5" fill-opacity="0.92" stroke="#bbb" stroke-width="1"/>
+<text x="538" y="722" font-size="11" font-family="Georgia,serif" fill="#666" text-anchor="middle" dominant-baseline="middle">8</text>
+<circle cx="722" cy="714" r="13" fill="#F5F5F5" fill-opacity="0.92" stroke="#bbb" stroke-width="1"/>
+<text x="722" y="714" font-size="11" font-family="Georgia,serif" fill="#666" text-anchor="middle" dominant-baseline="middle">9</text>
+<circle cx="686" cy="420" r="13" fill="#F5F5F5" fill-opacity="0.92" stroke="#bbb" stroke-width="1"/>
+<text x="686" y="420" font-size="11" font-family="Georgia,serif" fill="#666" text-anchor="middle" dominant-baseline="middle">10</text>
+<circle cx="722" cy="126" r="13" fill="#F5F5F5" fill-opacity="0.92" stroke="#bbb" stroke-width="1"/>
+<text x="722" y="126" font-size="11" font-family="Georgia,serif" fill="#666" text-anchor="middle" dominant-baseline="middle">11</text>
+<circle cx="536" cy="118" r="13" fill="#F5F5F5" fill-opacity="0.92" stroke="#bbb" stroke-width="1"/>
+<text x="536" y="118" font-size="11" font-family="Georgia,serif" fill="#666" text-anchor="middle" dominant-baseline="middle">12</text>
+<text x="420" y="235" font-size="15" font-family="Georgia,serif" fill="#5C3A1E" text-anchor="middle" dominant-baseline="middle" font-weight="bold">Su 16°25'</text>
+<text x="420" y="253" font-size="15" font-family="Georgia,serif" fill="#5C3A1E" text-anchor="middle" dominant-baseline="middle" font-weight="bold">Ke 10°14'℞</text>
+<text x="282" y="160" font-size="15" font-family="Georgia,serif" fill="#5C3A1E" text-anchor="middle" dominant-baseline="middle" font-weight="bold">Ma 23°25'</text>
+<text x="282" y="178" font-size="15" font-family="Georgia,serif" fill="#5C3A1E" text-anchor="middle" dominant-baseline="middle" font-weight="bold">Me 5°56'</text>
+<text x="282" y="196" font-size="15" font-family="Georgia,serif" fill="#5C3A1E" text-anchor="middle" dominant-baseline="middle" font-weight="bold">Ve 0°29'</text>
+<text x="420" y="604" font-size="15" font-family="Georgia,serif" fill="#5C3A1E" text-anchor="middle" dominant-baseline="middle" font-weight="bold">Ra 10°14'℞</text>
+<text x="558" y="670" font-size="15" font-family="Georgia,serif" fill="#5C3A1E" text-anchor="middle" dominant-baseline="middle" font-weight="bold">Mo 8°43'</text>
+<text x="666" y="286" font-size="15" font-family="Georgia,serif" fill="#5C3A1E" text-anchor="middle" dominant-baseline="middle" font-weight="bold">Sa 9°17'</text>
+<text x="558" y="178" font-size="15" font-family="Georgia,serif" fill="#5C3A1E" text-anchor="middle" dominant-baseline="middle" font-weight="bold">Ju 7°34'</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════
+         PAGE 3 — PLANET TABLE
+    ═══════════════════════════════════════════ -->
+    <div class="report-page">
+      <div class="rpage-head">
+        <span>KundaliScribe · Premium Report</span>
+        <span>John Doe · 1983-01-01</span>
+        <span>For spiritual guidance only</span>
+      </div>
+      <div class="rpage-body">
+        <div class="sec-title">Planet Table</div>
+        <div class="sec-lead">A transparent snapshot of your placements, used throughout the report.</div>
+        <table class="planet-table">
+          <thead>
+            <tr>
+              <th>Planet</th>
+              <th>Sign</th>
+              <th>Degree</th>
+              <th>Nakshatra · Pada</th>
+              <th>House</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="planet-name">Sun</span><span class="planet-devanagari">सूर्य</span></td>
+              <td>Sagittarius</td>
+              <td>16°25'</td>
+              <td>Purva Ashadha (Venus) · P1</td>
+              <td>H1 (self)</td>
+              <td class="status-friendly">friendly sign</td>
+            </tr>
+            <tr>
+              <td><span class="planet-name">Moon</span><span class="planet-devanagari">चंद्र</span></td>
+              <td>Cancer</td>
+              <td>8°43'</td>
+              <td>Pushya (Saturn) · P2</td>
+              <td>H8 (transformation)</td>
+              <td class="status-own">own sign</td>
+            </tr>
+            <tr>
+              <td><span class="planet-name">Mars</span><span class="planet-devanagari">मंगल</span></td>
+              <td>Capricorn</td>
+              <td>23°25'</td>
+              <td>Dhanishta (Mars) · P1</td>
+              <td>H2 (finance)</td>
+              <td class="status-exalted">Exalted ★</td>
+            </tr>
+            <tr>
+              <td><span class="planet-name">Mercury</span><span class="planet-devanagari">बुध</span></td>
+              <td>Capricorn</td>
+              <td>5°56'</td>
+              <td>Uttara Ashadha (Sun) · P3</td>
+              <td>H2 (finance)</td>
+              <td>neutral · functional malefic</td>
+            </tr>
+            <tr>
+              <td><span class="planet-name">Jupiter</span><span class="planet-devanagari">बृहस्पति</span></td>
+              <td>Scorpio</td>
+              <td>7°34'</td>
+              <td>Anuradha (Saturn) · P2</td>
+              <td>H12 (release)</td>
+              <td class="status-friendly">friendly sign</td>
+            </tr>
+            <tr>
+              <td><span class="planet-name">Venus</span><span class="planet-devanagari">शुक्र</span></td>
+              <td>Capricorn</td>
+              <td>0°29'</td>
+              <td>Uttara Ashadha (Sun) · P2</td>
+              <td>H2 (finance)</td>
+              <td class="status-friendly">friendly · vargottama ★</td>
+            </tr>
+            <tr>
+              <td><span class="planet-name">Saturn</span><span class="planet-devanagari">शनि</span></td>
+              <td>Libra</td>
+              <td>9°17'</td>
+              <td>Swati (Rahu) · P1</td>
+              <td>H11 (gains)</td>
+              <td class="status-exalted">Exalted ★</td>
+            </tr>
+            <tr>
+              <td><span class="planet-name">Rahu</span><span class="planet-devanagari">राहु</span></td>
+              <td>Gemini</td>
+              <td>10°14'</td>
+              <td>Ardra (Rahu) · P2</td>
+              <td>H7 (relationships)</td>
+              <td>neutral · retrograde ℞</td>
+            </tr>
+            <tr>
+              <td><span class="planet-name">Ketu</span><span class="planet-devanagari">केतु</span></td>
+              <td>Sagittarius</td>
+              <td>10°14'</td>
+              <td>Mula (Ketu) · P4</td>
+              <td>H1 (self)</td>
+              <td>neutral · retrograde ℞</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════
+         PAGE 4 — COSMIC SNAPSHOT
+    ═══════════════════════════════════════════ -->
+    <div class="report-page">
+      <div class="rpage-head">
+        <span>KundaliScribe · Premium Report</span>
+        <span>John Doe · 1983-01-01</span>
+        <span>For spiritual guidance only</span>
+      </div>
+      <div class="rpage-body">
+        <div class="sec-title">Cosmic Snapshot</div>
+        <div class="sec-lead">A quick orientation before the deeper interpretations.</div>
+        <div class="chip-row">
+          <span class="chip"><strong>Ascendant:</strong> Sagittarius · Purva Ashadha (P1)</span>
+          <span class="chip"><strong>Moon:</strong> Cancer · Pushya (P2)</span>
+          <span class="chip"><strong>Sun:</strong> Sagittarius</span>
+          <span class="chip"><strong>Lagna Lord:</strong> Jupiter · H12</span>
+          <span class="chip"><strong>Mahadasha:</strong> Venus / Rahu · until 2038-05</span>
+          <span class="chip"><strong>Atmakaraka:</strong> Mars</span>
+          <span class="chip"><strong>Birth:</strong> 1983-01-01 · 06:45 · Varanasi, India</span>
+        </div>
+        <div class="body-text">Sagittarius Lagna, Cancer Moon, and Sagittarius Sun together describe how you engage with the world, what you need emotionally, and the core identity you are building across this lifetime.</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:15px;font-weight:600;color:#2C1810;margin:16px 0 10px;">Interpretive Priority Signals</div>
+        <div class="two-col">
+          <div class="signal-box">
+            <h4>Top Strengths</h4>
+            <ul class="signal-list">
+              <li><strong>Mars</strong> (100/100) — Capricorn · H2 (finance)</li>
+              <li><strong>Saturn</strong> (100/100) — Libra · H11 (gains)</li>
+              <li><strong>Sun</strong> (85/100) — Sagittarius · H1 (self)</li>
+            </ul>
+          </div>
+          <div class="signal-box">
+            <h4>Growth Edges</h4>
+            <ul class="signal-list">
+              <li><strong>Mercury</strong> (60/100) — H2 · functional malefic</li>
+              <li><strong>Ketu</strong> (55/100) — H1 · retrograde</li>
+              <li><strong>Rahu</strong> (50/100) — H7 · retrograde</li>
+            </ul>
+          </div>
+        </div>
+        <div class="body-text" style="font-size:11px;color:#aaa;font-style:italic;">These are internal interpretive weights — not classical Shadbala. They reflect dignity + house weighting + retro/combust flags only.</div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════
+         PAGE 5 — TABLE OF CONTENTS
+    ═══════════════════════════════════════════ -->
+    <div class="report-page">
+      <div class="rpage-head">
+        <span>KundaliScribe · Premium Report</span>
+        <span>John Doe · 1983-01-01</span>
+        <span>For spiritual guidance only</span>
+      </div>
+      <div class="rpage-body">
+        <div class="sec-title" style="text-align:center;margin-bottom:20px;">Contents</div>
+        <div class="toc-grid">
+          <div class="toc-item"><span class="toc-icon">🧾</span> Your Life Blueprint</div>
+          <div class="toc-item"><span class="toc-icon">📋</span> Summary</div>
+          <div class="toc-item"><span class="toc-icon">⭐</span> Lagna &amp; Inner Nature</div>
+          <div class="toc-item"><span class="toc-icon">🪐</span> Planetary Snapshot</div>
+          <div class="toc-item"><span class="toc-icon">✚</span> Key Yogas &amp; Combinations</div>
+          <div class="toc-item"><span class="toc-icon">💊</span> Doshas &amp; Remedies</div>
+          <div class="toc-item"><span class="toc-icon">💼</span> Career &amp; Life Purpose</div>
+          <div class="toc-item"><span class="toc-icon">💰</span> Wealth &amp; Financial Patterns</div>
+          <div class="toc-item"><span class="toc-icon">🌙</span> Relationships &amp; Partnership</div>
+          <div class="toc-item"><span class="toc-icon">❤️</span> Health &amp; Vitality</div>
+          <div class="toc-item"><span class="toc-icon">⏱️</span> Life Cycles — Vimshottari Dasha</div>
+          <div class="toc-item"><span class="toc-icon">✨</span> Birth Panchang</div>
+          <div class="toc-item"><span class="toc-icon">📅</span> Next 90 Days &amp; Beyond</div>
+          <div class="toc-item"><span class="toc-icon">🔴</span> Remedies &amp; Guidance</div>
+          <div class="toc-item"><span class="toc-icon">🌿</span> Practices &amp; Affirmations</div>
+          <div class="toc-item"><span class="toc-icon">📊</span> Decision Dashboard — Next 30 Days</div>
+          <div class="toc-item"><span class="toc-icon">📐</span> Technical Appendix</div>
+          <div class="toc-item" style="opacity:0.4;font-style:italic;">+ Charts, Varga Placements, Dasha Timeline…</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════
+         PAGE 6 — YOUR LIFE BLUEPRINT (free)
+    ═══════════════════════════════════════════ -->
+    <div class="report-page">
+      <div class="rpage-head">
+        <span>KundaliScribe · Premium Report</span>
+        <span>John Doe · 1983-01-01</span>
+        <span>For spiritual guidance only</span>
+      </div>
+      <div class="rpage-body">
+        <div class="sec-title">Your Life Blueprint</div>
+        <div class="sec-lead">This section translates your chart into a usable operating style — how you naturally move through life, where friction tends to come from, and which patterns are most worth leaning into deliberately.</div>
+        <div class="two-col">
+          <div class="two-col-box">
+            <h4>Core Strengths</h4>
+            <ul>
+              <li>Durable discipline — you can build long-term results through consistency.</li>
+              <li>High drive — strong execution energy when you commit to one target.</li>
+              <li>Leadership identity — you do best when you own responsibility.</li>
+              <li>Life direction: Sagittarius Ascendant — you are here to seek meaning and expand horizons.</li>
+            </ul>
+          </div>
+          <div class="two-col-box">
+            <h4>Growth Lessons</h4>
+            <ul>
+              <li>Main lesson: consistency beats intensity — keep your routines simple and repeatable.</li>
+              <li>Emotional pattern: Cancer Moon tends to be sensitive and memory-driven.</li>
+              <li>Your mind recharges through stable routines (Moon in H8).</li>
+            </ul>
+          </div>
+        </div>
+        <div class="two-col">
+          <div class="two-col-box">
+            <h4>How This Tends to Play Out</h4>
+            <ul>
+              <li>Your outer approach is filtered through Sagittarius Lagna and Purva Ashadha nakshatra — the more intentional your routines, the faster opportunities open.</li>
+              <li>Emotionally, Cancer Moon in H8 shows where life feels personal. Decisions tend to go best when that area is stabilised first.</li>
+              <li>Purpose-wise, Sagittarius Sun in H1 suggests your confidence compounds when you take visible ownership.</li>
+            </ul>
+          </div>
+          <div class="two-col-box">
+            <h4>How to Use It Well</h4>
+            <ul>
+              <li>Protect the part of life shown by Moon in H8; when that zone is calm, your judgement improves.</li>
+              <li>Take one concrete leadership action in the domain of Sun in H1 over the next 30 days.</li>
+              <li>Mars is your most reliable planetary asset right now — lean on its themes first.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="callout-quote">Plain-English takeaway: Your chart does not just describe personality; it shows where life starts to feel smoother when you align your effort with your natural rhythm instead of forcing every area equally.</div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════
+         PAYWALL — rest of report locked
+    ═══════════════════════════════════════════ -->
+    <div class="paywall-wrapper">
+      <!-- Blurred preview of next page -->
+      <div class="paywall-blur">
+        <div class="report-page">
+          <div class="rpage-head">
+            <span>KundaliScribe · Premium Report</span>
+            <span>John Doe · 1983-01-01</span>
+            <span>For spiritual guidance only</span>
+          </div>
+          <div class="rpage-body">
+            <div class="sec-title">Your Cosmic Blueprint</div>
+            <div class="sec-lead">At your core, you are a seeker of depth dressed as an adventurer — a Sagittarius Ascendant soul whose inner world runs far more profound, sensitive, and transformative than your outward optimism suggests.</div>
+            <div class="body-text">You arrived in this world with a fire that reaches for meaning rather than mere success. The Sagittarius lagna gives you a philosophical compass that is difficult to suppress — you move through life asking not just "what" but "why," and the answers you find tend to surprise even you.</div>
+            <div class="body-text">Your chart is anchored by unusual material strength — Mars exalted in Capricorn, Saturn exalted in Libra, and Venus marked as Vargottama in Capricorn all clustering in the second house of wealth and speech.</div>
+            <div class="two-col">
+              <div class="two-col-box"><h4>Structural Patience</h4><ul><li>Mars at 23°25' Capricorn H2 in exaltation forms an exceptionally grounded material foundation.</li></ul></div>
+              <div class="two-col-box"><h4>Emotional Intelligence</h4><ul><li>Moon at 8°43' Cancer H8 in own sign within Pushya nakshatra gives deep nurturing capacity and resilience.</li></ul></div>
+            </div>
+            <div class="body-text">… and more pages covering Career, Wealth, Relationships, Health, Dasha timeline, Remedies, Decision Dashboard, and Technical Appendix with full divisional charts.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Overlay -->
+      <div class="paywall-overlay">
+        <div class="paywall-icon">🔐</div>
+        <h2>Your Full Report Awaits</h2>
+        <p>The remaining <strong> pages</strong> of deep Vedic analysis are in your personalised report — generated from your exact birth details.</p>
+        <div class="paywall-sections">
+          <span class="paywall-tag">Lagna &amp; Inner Nature</span>
+          <span class="paywall-tag">Career &amp; Life Purpose</span>
+          <span class="paywall-tag">Wealth Patterns</span>
+          <span class="paywall-tag">Relationships</span>
+          <span class="paywall-tag">Health &amp; Vitality</span>
+          <span class="paywall-tag">Vimshottari Dasha</span>
+          <span class="paywall-tag">Doshas &amp; Remedies</span>
+          <span class="paywall-tag">Next 90 Days</span>
+          <span class="paywall-tag">Planetary Yogas</span>
+          <span class="paywall-tag">Navamsa (D9) Chart</span>
+          <span class="paywall-tag">Decision Dashboard</span>
+          <span class="paywall-tag">Technical Appendix</span>
+        </div>
+        <span class="paywall-price">$2.99</span>
+        <span class="paywall-note">One-time · PDF via email · No account needed</span>
+        <div class="paywall-btns">
+          <a href="/" class="btn-paywall" onclick="sessionStorage.setItem('openModal','1'); return true;">✦ &nbsp; Get My Personalised Report</a>
+          <a href="https://play.google.com/store/apps/details?id=com.kundaliscribe.app" target="_blank" rel="noopener" class="btn-paywall-sec">▶ &nbsp; Try the Android App (Free Teaser)</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════
+         APPENDIX PREVIEW — Charts
+    ═══════════════════════════════════════════ -->
+    <span class="appendix-label">From the Technical Appendix</span>
+    <div class="appendix-title">Sample Chart Visuals</div>
+    <p class="appendix-sub">These charts are included in every full report. Yours will reflect your exact planetary positions.</p>
+
+    <!-- Planetary Strength chart -->
+    <div class="strength-chart">
+      <h3>Planetary Dignity &amp; Strength Index</h3>
+      <div class="s-lead">Heuristic weights · Sthana=dignity · Chesta=speed · VG=vargottama · Asp=aspects received</div>
+      <div class="bar-row">
+        <div class="bar-label">Mars <span>मंगल</span></div>
+        <div class="bar-track"><div class="bar-fill strong" style="width:100%"></div></div>
+        <div class="bar-val">Exalted (100)</div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">Saturn <span>शनि</span></div>
+        <div class="bar-track"><div class="bar-fill strong" style="width:100%"></div></div>
+        <div class="bar-val">Exalted (100)</div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">Sun <span>सूर्य</span></div>
+        <div class="bar-track"><div class="bar-fill strong" style="width:85%"></div></div>
+        <div class="bar-val">Friendly (85)</div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">Moon <span>चंद्र</span></div>
+        <div class="bar-track"><div class="bar-fill strong" style="width:85%"></div></div>
+        <div class="bar-val">Own Sign (85)</div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">Venus <span>शुक्र</span></div>
+        <div class="bar-track"><div class="bar-fill mid" style="width:81%"></div></div>
+        <div class="bar-val">Friendly (81)</div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">Mercury <span>बुध</span></div>
+        <div class="bar-track"><div class="bar-fill mid" style="width:60%"></div></div>
+        <div class="bar-val">Neutral (60)</div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">Jupiter <span>बृहस्पति</span></div>
+        <div class="bar-track"><div class="bar-fill mid" style="width:60%"></div></div>
+        <div class="bar-val">Friendly (60)</div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">Ketu <span>केतु</span></div>
+        <div class="bar-track"><div class="bar-fill weak" style="width:55%"></div></div>
+        <div class="bar-val">Neutral (55)</div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">Rahu <span>राहु</span></div>
+        <div class="bar-track"><div class="bar-fill weak" style="width:50%"></div></div>
+        <div class="bar-val">Neutral (50)</div>
+      </div>
+      <div style="margin-top:14px;display:flex;gap:16px;font-family:'DM Sans',sans-serif;font-size:11px;color:#888;">
+        <span><span style="display:inline-block;width:10px;height:10px;background:#4EC9B0;border-radius:2px;margin-right:5px;"></span>Strong (70+)</span>
+        <span><span style="display:inline-block;width:10px;height:10px;background:#C9A84C;border-radius:2px;margin-right:5px;"></span>Moderate (45–69)</span>
+        <span><span style="display:inline-block;width:10px;height:10px;background:#d0776a;border-radius:2px;margin-right:5px;"></span>Weak (&lt;45)</span>
+      </div>
+    </div>
+
+    <!-- Dasha Timeline -->
+    <div class="dasha-chart">
+      <h3>Vimshottari Dasha Timeline</h3>
+      <div class="s-lead">80-year life cycle from Moon nakshatra · Your current period is highlighted</div>
+      <div class="dasha-timeline">
+        <div class="dasha-seg completed" style="width:11%;background:#7c5cbf;">Saturn</div>
+        <div class="dasha-seg completed" style="width:17%;background:#4a8a4a;">Mercury</div>
+        <div class="dasha-seg completed" style="width:7%;background:#b8860b;">Ketu</div>
+        <div class="dasha-seg current" style="width:20%;background:#9b59b6;">Venus</div>
+        <div class="dasha-seg" style="width:6%;background:#e8a020;opacity:0.4;">Sun</div>
+        <div class="dasha-seg" style="width:10%;background:#5a7ec0;opacity:0.4;">Moon</div>
+        <div class="dasha-seg" style="width:7%;background:#d04030;opacity:0.4;">Mars</div>
+        <div class="dasha-seg" style="width:18%;background:#555;opacity:0.4;">Rahu</div>
+        <div class="dasha-seg" style="width:4%;background:#c9a84c;opacity:0.4;">Ju</div>
+      </div>
+      <div class="dasha-current-box">
+        <strong>Current Mahadasha:</strong> Venus (2018-05-03 → 2038-05-03) &nbsp;·&nbsp;
+        <strong>Antardasha:</strong> Venus–Rahu (2025-07-02 → 2028-07-02)<br>
+        <span style="color:#888;font-size:11px;margin-top:4px;display:block;">This period activates relationships, creativity, partnership-driven expansion, and material consolidation — Venus energy responds best to appreciation and balance.</span>
+      </div>
+    </div>
+
+    <!-- Graha Drishti — exact SVG from report -->
+    <div class="strength-chart">
+      <h3>Graha Drishti — Aspect House Grid</h3>
+      <div class="s-lead">Planetary aspects across all 12 houses · 7th aspect · Special aspects (Mars, Jupiter, Saturn) · Own house</div>
+      <div style="overflow-x:auto;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 462" style="width:100%;max-width:580px;height:auto;display:block;">
+<rect width="580" height="462" fill="#FDFAF4" rx="6"/>
+<text x="290" y="15" font-size="12" font-family="Georgia,serif" fill="#8B3A1A" text-anchor="middle" font-weight="bold">Graha Drishti — Aspects (House Grid)</text>
+<rect x="88" y="22" width="40" height="12" fill="#C9A84C" opacity="0.15"/><text x="108" y="32" font-size="9" font-family="Georgia,serif" fill="#5a4020" text-anchor="middle" font-weight="bold">1</text><text x="108" y="54" font-size="7" font-family="Georgia,serif" fill="#9a8060" text-anchor="middle">Sag</text>
+<rect x="128" y="22" width="40" height="12" fill="#C9A84C" opacity="0.15"/><text x="148" y="32" font-size="9" font-family="Georgia,serif" fill="#5a4020" text-anchor="middle" font-weight="bold">2</text><text x="148" y="54" font-size="7" font-family="Georgia,serif" fill="#9a8060" text-anchor="middle">Cap</text>
+<rect x="168" y="22" width="40" height="12" fill="#C9A84C" opacity="0.15"/><text x="188" y="32" font-size="9" font-family="Georgia,serif" fill="#5a4020" text-anchor="middle" font-weight="bold">3</text><text x="188" y="54" font-size="7" font-family="Georgia,serif" fill="#9a8060" text-anchor="middle">Aqu</text>
+<rect x="208" y="22" width="40" height="12" fill="#C9A84C" opacity="0.15"/><text x="228" y="32" font-size="9" font-family="Georgia,serif" fill="#5a4020" text-anchor="middle" font-weight="bold">4</text><text x="228" y="54" font-size="7" font-family="Georgia,serif" fill="#9a8060" text-anchor="middle">Pis</text>
+<rect x="248" y="22" width="40" height="12" fill="#C9A84C" opacity="0.15"/><text x="268" y="32" font-size="9" font-family="Georgia,serif" fill="#5a4020" text-anchor="middle" font-weight="bold">5</text><text x="268" y="54" font-size="7" font-family="Georgia,serif" fill="#9a8060" text-anchor="middle">Ari</text>
+<rect x="288" y="22" width="40" height="12" fill="#C9A84C" opacity="0.15"/><text x="308" y="32" font-size="9" font-family="Georgia,serif" fill="#5a4020" text-anchor="middle" font-weight="bold">6</text><text x="308" y="54" font-size="7" font-family="Georgia,serif" fill="#9a8060" text-anchor="middle">Tau</text>
+<rect x="328" y="22" width="40" height="12" fill="#C9A84C" opacity="0.15"/><text x="348" y="32" font-size="9" font-family="Georgia,serif" fill="#5a4020" text-anchor="middle" font-weight="bold">7</text><text x="348" y="54" font-size="7" font-family="Georgia,serif" fill="#9a8060" text-anchor="middle">Gem</text>
+<rect x="368" y="22" width="40" height="12" fill="#C9A84C" opacity="0.15"/><text x="388" y="32" font-size="9" font-family="Georgia,serif" fill="#5a4020" text-anchor="middle" font-weight="bold">8</text><text x="388" y="54" font-size="7" font-family="Georgia,serif" fill="#9a8060" text-anchor="middle">Can</text>
+<rect x="408" y="22" width="40" height="12" fill="#C9A84C" opacity="0.15"/><text x="428" y="32" font-size="9" font-family="Georgia,serif" fill="#5a4020" text-anchor="middle" font-weight="bold">9</text><text x="428" y="54" font-size="7" font-family="Georgia,serif" fill="#9a8060" text-anchor="middle">Leo</text>
+<rect x="448" y="22" width="40" height="12" fill="#C9A84C" opacity="0.15"/><text x="468" y="32" font-size="9" font-family="Georgia,serif" fill="#5a4020" text-anchor="middle" font-weight="bold">10</text><text x="468" y="54" font-size="7" font-family="Georgia,serif" fill="#9a8060" text-anchor="middle">Vir</text>
+<rect x="488" y="22" width="40" height="12" fill="#C9A84C" opacity="0.15"/><text x="508" y="32" font-size="9" font-family="Georgia,serif" fill="#5a4020" text-anchor="middle" font-weight="bold">11</text><text x="508" y="54" font-size="7" font-family="Georgia,serif" fill="#9a8060" text-anchor="middle">Lib</text>
+<rect x="528" y="22" width="40" height="12" fill="#C9A84C" opacity="0.15"/><text x="548" y="32" font-size="9" font-family="Georgia,serif" fill="#5a4020" text-anchor="middle" font-weight="bold">12</text><text x="548" y="54" font-size="7" font-family="Georgia,serif" fill="#9a8060" text-anchor="middle">Sco</text>
+<!-- Sun row -->
+<rect x="0" y="58" width="580" height="40" fill="#FDFAF4"/>
+<text x="85" y="82" font-size="9" font-family="Georgia,serif" fill="#D97706" text-anchor="end" font-weight="bold">Sun</text>
+<circle cx="108" cy="78" r="10" fill="#D97706" opacity="0.25"/><text x="108" y="82" font-size="9" font-family="Georgia,serif" fill="#D97706" text-anchor="middle" font-weight="bold">Su</text>
+<text x="148" y="82" font-size="7" font-family="Georgia,serif" fill="#bbb" text-anchor="middle">Ma Me Ve</text>
+<rect x="331" y="61" width="34" height="34" fill="#C9A84C" opacity="0.30" rx="3"/><text x="348" y="82" font-size="7" font-family="Georgia,serif" fill="#C9A84C" text-anchor="middle" font-weight="bold">Ra</text>
+<text x="388" y="82" font-size="7" font-family="Georgia,serif" fill="#bbb" text-anchor="middle">Mo</text>
+<text x="508" y="82" font-size="7" font-family="Georgia,serif" fill="#bbb" text-anchor="middle">Sa</text>
+<text x="548" y="82" font-size="7" font-family="Georgia,serif" fill="#bbb" text-anchor="middle">Ju</text>
+<!-- Moon row -->
+<rect x="0" y="98" width="580" height="40" fill="#F5F0E8"/>
+<text x="85" y="122" font-size="9" font-family="Georgia,serif" fill="#4338CA" text-anchor="end" font-weight="bold">Moon</text>
+<text x="108" y="122" font-size="7" font-family="Georgia,serif" fill="#bbb" text-anchor="middle">Su Ke</text>
+<rect x="131" y="101" width="34" height="34" fill="#C9A84C" opacity="0.30" rx="3"/><text x="148" y="122" font-size="7" font-family="Georgia,serif" fill="#C9A84C" text-anchor="middle" font-weight="bold">Ma Me Ve</text>
+<text x="348" y="122" font-size="7" font-family="Georgia,serif" fill="#bbb" text-anchor="middle">Ra</text>
+<circle cx="388" cy="118" r="10" fill="#4338CA" opacity="0.25"/><text x="388" y="122" font-size="9" font-family="Georgia,serif" fill="#4338CA" text-anchor="middle" font-weight="bold">Mo</text>
+<text x="508" y="122" font-size="7" font-family="Georgia,serif" fill="#bbb" text-anchor="middle">Sa</text>
+<text x="548" y="122" font-size="7" font-family="Georgia,serif" fill="#bbb" text-anchor="middle">Ju</text>
+<!-- Mars row -->
+<rect x="0" y="138" width="580" height="40" fill="#FDFAF4"/>
+<text x="85" y="162" font-size="9" font-family="Georgia,serif" fill="#DC2626" text-anchor="end" font-weight="bold">Mars</text>
+<text x="108" y="162" font-size="7" font-family="Georgia,serif" fill="#bbb" text-anchor="middle">Su Ke</text>
+<circle cx="148" cy="158" r="10" fill="#DC2626" opacity="0.25"/><text x="148" y="162" font-size="9" font-family="Georgia,serif" fill="#DC2626" text-anchor="middle" font-weight="bold">Ma</text>
+<rect x="251" y="141" width="34" height="34" fill="#DC2626" opacity="0.45" rx="3"/><text x="268" y="162" font-size="9" font-family="Georgia,serif" fill="#DC2626" text-anchor="middle">●</text>
+<text x="348" y="162" font-size="7" font-family="Georgia,serif" fill="#bbb" text-anchor="middle">Ra</text>
+<rect x="371" y="141" width="34" height="34" fill="#C9A84C" opacity="0.30" rx="3"/><text x="388" y="162" font-size="7" font-family="Georgia,serif" fill="#C9A84C" text-anchor="middle" font-weight="bold">Mo</text>
+<rect x="411" y="141" width="34" height="34" fill="#DC2626" opacity="0.45" rx="3"/><text x="428" y="162" font-size="9" font-family="Georgia,serif" fill="#DC2626" text-anchor="middle">●</text>
+<text x="508" y="162" font-size="7" font-family="Georgia,serif" fill="#bbb" text-anchor="middle">Sa</text>
+<text x="548" y="162" font-size="7" font-family="Georgia,serif" fill="#bbb" text-anchor="middle">Ju</text>
+<!-- Mercury row -->
+<rect x="0" y="178" width="580" height="40" fill="#F5F0E8"/>
+<text x="85" y="202" font-size="9" font-family="Georgia,serif" fill="#059669" text-anchor="end" font-weight="bold">Mercury</text>
+<text x="108" y="202" font-size="7" font-family="Georgia,serif" fill="#bbb" text-anchor="middle">Su Ke</text>
+<circle cx="148" cy="198" r="10" fill="#059669" opacity="0.25"/><text x="148" y="202" font-size="9" font-family="Georgia,serif" fill="#059669" text-anchor="middle" font-weight="bold">Me</text>
+<text x="348" y="202" font-size="7" font-family="Georgia,serif" fill="#bbb" text-anchor="middle">Ra</text>
+<rect x="371" y="181" width="34" height="34" fill="#C9A84C" opacity="0.30" rx="3"/><text x="388" y="202" font-size="7" font-family="Georgia,serif" fill="#C9A84C" text-anchor="middle" font-weight="bold">Mo</text>
+<text x="508" y="202" font-size="7" font-family="Georgia,serif" fill="#bbb" text-anchor="middle">Sa</text>
+<text x="548" y="202" font-size="7" font-family="Georgia,serif" fill="#bbb" text-anchor="middle">Ju</text>
+<!-- Jupiter row -->
+<rect x="0" y="218" width="580" height="40" fill="#FDFAF4"/>
+<text x="85" y="242" font-size="9" font-family="Georgia,serif" fill="#B45309" text-anchor="end" font-weight="bold">Jupiter</text>
+<text x="108" y="242" font-size="7" font-family="Georgia,serif" fill="#bbb" text-anchor="middle">Su Ke</text>
+<text x="148" y="242" font-size="7" font-family="Georgia,serif" fill="#bbb" text-anchor="middle">Ma Me Ve</text>
+<rect x="211" y="221" width="34" height="34" fill="#DC2626" opacity="0.45" rx="3"/><text x="228" y="242" font-size="9" font-family="Georgia,serif" fill="#DC2626" text-anchor="middle">●</text>
+<rect x="291" y="221" width="34" height="34" fill="#C9A84C" opacity="0.30" rx="3"/><text x="308" y="242" font-size="9" font-family="Georgia,serif" fill="#C9A84C" text-anchor="middle">●</text>
+<text x="348" y="242" font-size="7" font-family="Georgia,serif" fill="#bbb" text-anchor="middle">Ra</text>
+<rect x="371" y="221" width="34" height="34" fill="#DC2626" opacity="0.45" rx="3"/><text x="388" y="242" font-size="7" font-family="Georgia,serif" fill="#DC2626" text-anchor="middle" font-weight="bold">Mo</text>
+<text x="508" y="242" font-size="7" font-family="Georgia,serif" fill="#bbb" text-anchor="middle">Sa</text>
+<circle cx="548" cy="238" r="10" fill="#B45309" opacity="0.25"/><text x="548" y="242" font-size="9" font-family="Georgia,serif" fill="#B45309" text-anchor="middle" font-weight="bold">Ju</text>
+<!-- Venus row -->
+<rect x="0" y="258" width="580" height="40" fill="#F5F0E8"/>
+<text x="85" y="282" font-size="9" font-family="Georgia,serif" fill="#7C3AED" text-anchor="end" font-weight="bold">Venus</text>
+<text x="108" y="282" font-size="7" font-family="Georgia,serif" fill="#bbb" text-anchor="middle">Su Ke</text>
+<circle cx="148" cy="278" r="10" fill="#7C3AED" opacity="0.25"/><text x="148" y="282" font-size="9" font-family="Georgia,serif" fill="#7C3AED" text-anchor="middle" font-weight="bold">Ve</text>
+<text x="348" y="282" font-size="7" font-family="Georgia,serif" fill="#bbb" text-anchor="middle">Ra</text>
+<rect x="371" y="261" width="34" height="34" fill="#C9A84C" opacity="0.30" rx="3"/><text x="388" y="282" font-size="7" font-family="Georgia,serif" fill="#C9A84C" text-anchor="middle" font-weight="bold">Mo</text>
+<text x="508" y="282" font-size="7" font-family="Georgia,serif" fill="#bbb" text-anchor="middle">Sa</text>
+<text x="548" y="282" font-size="7" font-family="Georgia,serif" fill="#bbb" text-anchor="middle">Ju</text>
+<!-- Saturn row -->
+<rect x="0" y="298" width="580" height="40" fill="#FDFAF4"/>
+<text x="85" y="322" font-size="9" font-family="Georgia,serif" fill="#1F2937" text-anchor="end" font-weight="bold">Saturn</text>
+<rect x="91" y="301" width="34" height="34" fill="#DC2626" opacity="0.45" rx="3"/><text x="108" y="322" font-size="7" font-family="Georgia,serif" fill="#DC2626" text-anchor="middle" font-weight="bold">Su Ke</text>
+<text x="148" y="322" font-size="7" font-family="Georgia,serif" fill="#bbb" text-anchor="middle">Ma Me Ve</text>
+<rect x="251" y="301" width="34" height="34" fill="#C9A84C" opacity="0.30" rx="3"/><text x="268" y="322" font-size="9" font-family="Georgia,serif" fill="#C9A84C" text-anchor="middle">●</text>
+<text x="348" y="322" font-size="7" font-family="Georgia,serif" fill="#bbb" text-anchor="middle">Ra</text>
+<rect x="371" y="301" width="34" height="34" fill="#DC2626" opacity="0.45" rx="3"/><text x="388" y="322" font-size="7" font-family="Georgia,serif" fill="#DC2626" text-anchor="middle" font-weight="bold">Mo</text>
+<circle cx="508" cy="318" r="10" fill="#1F2937" opacity="0.25"/><text x="508" y="322" font-size="9" font-family="Georgia,serif" fill="#1F2937" text-anchor="middle" font-weight="bold">Sa</text>
+<text x="548" y="322" font-size="7" font-family="Georgia,serif" fill="#bbb" text-anchor="middle">Ju</text>
+<!-- Rahu row -->
+<rect x="0" y="338" width="580" height="40" fill="#F5F0E8"/>
+<text x="85" y="362" font-size="9" font-family="Georgia,serif" fill="#4B5563" text-anchor="end" font-weight="bold">Rahu</text>
+<rect x="91" y="341" width="34" height="34" fill="#C9A84C" opacity="0.30" rx="3"/><text x="108" y="362" font-size="7" font-family="Georgia,serif" fill="#C9A84C" text-anchor="middle" font-weight="bold">Su Ke</text>
+<text x="148" y="362" font-size="7" font-family="Georgia,serif" fill="#bbb" text-anchor="middle">Ma Me Ve</text>
+<circle cx="348" cy="358" r="10" fill="#4B5563" opacity="0.25"/><text x="348" y="362" font-size="9" font-family="Georgia,serif" fill="#4B5563" text-anchor="middle" font-weight="bold">Ra</text>
+<text x="388" y="362" font-size="7" font-family="Georgia,serif" fill="#bbb" text-anchor="middle">Mo</text>
+<text x="508" y="362" font-size="7" font-family="Georgia,serif" fill="#bbb" text-anchor="middle">Sa</text>
+<text x="548" y="362" font-size="7" font-family="Georgia,serif" fill="#bbb" text-anchor="middle">Ju</text>
+<!-- Ketu row -->
+<rect x="0" y="378" width="580" height="40" fill="#FDFAF4"/>
+<text x="85" y="402" font-size="9" font-family="Georgia,serif" fill="#78350F" text-anchor="end" font-weight="bold">Ketu</text>
+<circle cx="108" cy="398" r="10" fill="#78350F" opacity="0.25"/><text x="108" y="402" font-size="9" font-family="Georgia,serif" fill="#78350F" text-anchor="middle" font-weight="bold">Ke</text>
+<text x="148" y="402" font-size="7" font-family="Georgia,serif" fill="#bbb" text-anchor="middle">Ma Me Ve</text>
+<rect x="331" y="381" width="34" height="34" fill="#C9A84C" opacity="0.30" rx="3"/><text x="348" y="402" font-size="7" font-family="Georgia,serif" fill="#C9A84C" text-anchor="middle" font-weight="bold">Ra</text>
+<text x="388" y="402" font-size="7" font-family="Georgia,serif" fill="#bbb" text-anchor="middle">Mo</text>
+<text x="508" y="402" font-size="7" font-family="Georgia,serif" fill="#bbb" text-anchor="middle">Sa</text>
+<text x="548" y="402" font-size="7" font-family="Georgia,serif" fill="#bbb" text-anchor="middle">Ju</text>
+<!-- Grid lines vertical -->
+<line x1="88" y1="22" x2="88" y2="442" stroke="#ddd" stroke-width="0.5"/>
+<line x1="128" y1="22" x2="128" y2="442" stroke="#ddd" stroke-width="0.5"/>
+<line x1="168" y1="22" x2="168" y2="442" stroke="#ddd" stroke-width="0.5"/>
+<line x1="208" y1="22" x2="208" y2="442" stroke="#ddd" stroke-width="0.5"/>
+<line x1="248" y1="22" x2="248" y2="442" stroke="#ddd" stroke-width="0.5"/>
+<line x1="288" y1="22" x2="288" y2="442" stroke="#ddd" stroke-width="0.5"/>
+<line x1="328" y1="22" x2="328" y2="442" stroke="#ddd" stroke-width="0.5"/>
+<line x1="368" y1="22" x2="368" y2="442" stroke="#ddd" stroke-width="0.5"/>
+<line x1="408" y1="22" x2="408" y2="442" stroke="#ddd" stroke-width="0.5"/>
+<line x1="448" y1="22" x2="448" y2="442" stroke="#ddd" stroke-width="0.5"/>
+<line x1="488" y1="22" x2="488" y2="442" stroke="#ddd" stroke-width="0.5"/>
+<line x1="528" y1="22" x2="528" y2="442" stroke="#ddd" stroke-width="0.5"/>
+<line x1="568" y1="22" x2="568" y2="442" stroke="#ddd" stroke-width="0.5"/>
+<!-- Grid lines horizontal -->
+<line x1="0" y1="58" x2="580" y2="58" stroke="#ddd" stroke-width="0.5"/>
+<line x1="0" y1="98" x2="580" y2="98" stroke="#ddd" stroke-width="0.5"/>
+<line x1="0" y1="138" x2="580" y2="138" stroke="#ddd" stroke-width="0.5"/>
+<line x1="0" y1="178" x2="580" y2="178" stroke="#ddd" stroke-width="0.5"/>
+<line x1="0" y1="218" x2="580" y2="218" stroke="#ddd" stroke-width="0.5"/>
+<line x1="0" y1="258" x2="580" y2="258" stroke="#ddd" stroke-width="0.5"/>
+<line x1="0" y1="298" x2="580" y2="298" stroke="#ddd" stroke-width="0.5"/>
+<line x1="0" y1="338" x2="580" y2="338" stroke="#ddd" stroke-width="0.5"/>
+<line x1="0" y1="378" x2="580" y2="378" stroke="#ddd" stroke-width="0.5"/>
+<line x1="0" y1="418" x2="580" y2="418" stroke="#ddd" stroke-width="0.5"/>
+<!-- Legend -->
+<rect x="4" y="443" width="10" height="8" fill="#C9A84C" opacity="0.65" rx="2"/>
+<text x="17" y="450" font-size="8" fill="#5a4020">7th aspect</text>
+<rect x="74" y="443" width="10" height="8" fill="#DC2626" opacity="0.55" rx="2"/>
+<text x="87" y="450" font-size="8" fill="#DC2626">Special aspect</text>
+<circle cx="170" cy="447" r="5" fill="#888" opacity="0.3"/>
+<text x="178" y="450" font-size="8" fill="#666">Own house</text>
+<rect x="442" y="443" width="8" height="8" fill="#bbb" opacity="0.4" rx="2"/>
+<text x="453" y="450" font-size="8" fill="#aaa">Grey = not aspecting</text>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Final CTA -->
+    <div style="text-align:center;margin:48px 0 16px;">
+      <span style="display:block;font-family:'Cormorant Garamond',serif;font-size:28px;color:var(--gold-light);margin-bottom:10px;">Ready to See Your Full Chart?</span>
+      <p style="color:var(--muted);font-size:14px;margin-bottom:24px;max-width:420px;margin-left:auto;margin-right:auto;">Your personalised 40+ page Vedic report, generated from your exact birth details, delivered to your inbox in minutes.</p>
+      <a href="/" class="btn-paywall" style="font-size:15px;padding:16px 40px;" onclick="sessionStorage.setItem('openModal','1'); return true;">✦ &nbsp; Get My Personalised Report — $2.99</a>
+      <div style="margin-top:14px;">
+        <a href="https://play.google.com/store/apps/details?id=com.kundaliscribe.app" target="_blank" rel="noopener" class="btn-paywall-sec">▶ &nbsp; Download Android App (Free Teaser)</a>
+      </div>
+    </div>
+
+  </div><!-- /report-wrapper -->
+
+  <footer class="site-footer">
+    <span class="brand">KundaliScribe</span>
+    <div class="links">
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/terms.html">Terms of Use</a>
+      <a href="/delete-my-data.html">Delete My Data</a>
+      <a href="mailto:kundaliscribe@gmail.com">Support</a>
+    </div>
+    <p class="copy">© 2026 KundaliScribe. All rights reserved. For entertainment and personal insight purposes only.</p>
+  </footer>
+
+</body>
+</html>

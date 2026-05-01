@@ -356,6 +356,7 @@
     <p class="hero-text">Your birth chart, interpreted through the ancient lens of Vedic astrology — written by AI, personalised to you.</p>
     <div class="cta-group">
       <button class="btn btn-primary" onclick="openModal()">Get My Report — Introductory price - $2.99</button>
+      <a class="btn btn-secondary" href="/sample-report.html">📄 Preview Sample Report</a>
       <a class="btn btn-secondary" href="https://play.google.com/store/apps/details?id=com.kundaliscribe.app" target="_blank" rel="noopener">▶ Download Android App</a>
     </div>
   </header>
@@ -395,6 +396,49 @@
     </div>
 
     <hr class="divider" />
+
+    <!-- Sample report preview strip -->
+    <div style="
+      border: 1px solid rgba(201,168,76,0.25);
+      border-radius: 4px;
+      padding: 36px 32px;
+      margin-bottom: 64px;
+      background: rgba(201,168,76,0.04);
+      text-align: center;
+    ">
+      <span style="
+        font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+        color: var(--gold); display: block; margin-bottom: 10px;
+      ">See Before You Buy</span>
+      <h2 style="
+        font-family: 'Cormorant Garamond', serif;
+        font-size: clamp(22px, 3.5vw, 30px);
+        font-weight: 600; color: var(--ink); margin-bottom: 10px;
+      ">Preview a Real Sample Report</h2>
+      <p style="font-size: 14px; color: var(--warm-mid); max-width: 460px; margin: 0 auto 28px; line-height: 1.65;">
+        Browse the cover, birth chart, planet table, cosmic snapshot, and life blueprint from a real KundaliScribe report — so you know exactly what you're getting.
+      </p>
+      <div style="
+        display: flex; flex-wrap: wrap; gap: 8px;
+        justify-content: center; margin-bottom: 28px;
+      ">
+        <span style="background:rgba(201,168,76,0.1);border:1px solid rgba(201,168,76,0.25);color:var(--gold);font-size:11px;letter-spacing:0.08em;padding:4px 12px;border-radius:20px;">Rashi Chart</span>
+        <span style="background:rgba(201,168,76,0.1);border:1px solid rgba(201,168,76,0.25);color:var(--gold);font-size:11px;letter-spacing:0.08em;padding:4px 12px;border-radius:20px;">Planet Table</span>
+        <span style="background:rgba(201,168,76,0.1);border:1px solid rgba(201,168,76,0.25);color:var(--gold);font-size:11px;letter-spacing:0.08em;padding:4px 12px;border-radius:20px;">Life Blueprint</span>
+        <span style="background:rgba(201,168,76,0.1);border:1px solid rgba(201,168,76,0.25);color:var(--gold);font-size:11px;letter-spacing:0.08em;padding:4px 12px;border-radius:20px;">Strength Index</span>
+        <span style="background:rgba(201,168,76,0.1);border:1px solid rgba(201,168,76,0.25);color:var(--gold);font-size:11px;letter-spacing:0.08em;padding:4px 12px;border-radius:20px;">Dasha Timeline</span>
+        <span style="background:rgba(201,168,76,0.1);border:1px solid rgba(201,168,76,0.25);color:var(--gold);font-size:11px;letter-spacing:0.08em;padding:4px 12px;border-radius:20px;">Navamsa (D9)</span>
+      </div>
+      <a href="/sample-report.html" style="
+        display: inline-flex; align-items: center; gap: 8px;
+        padding: 13px 28px; border-radius: 3px;
+        font-family: 'DM Sans', sans-serif; font-size: 14px;
+        font-weight: 500; letter-spacing: 0.06em; text-decoration: none;
+        background: transparent; color: var(--gold);
+        border: 1px solid rgba(201,168,76,0.5);
+        transition: opacity 0.2s;
+      ">📄 &nbsp; View Sample Report</a>
+    </div>
 
     <span class="section-label">How it works</span>
     <div class="steps">
@@ -715,7 +759,15 @@
     }
 
     // ── Modal ─────────────────────────────────────────────────────────────────
-    function openModal() {
+    // Auto-open modal if redirected from sample report page
+  window.addEventListener('DOMContentLoaded', function() {
+    if (sessionStorage.getItem('openModal') === '1') {
+      sessionStorage.removeItem('openModal');
+      openModal();
+    }
+  });
+
+  function openModal() {
       document.getElementById('modal').classList.add('open');
       document.body.style.overflow = 'hidden';
     }
